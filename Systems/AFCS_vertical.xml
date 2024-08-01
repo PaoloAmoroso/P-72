@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- ATR72-500 Lateral Automatic Flight Control System -->
+
+<PropertyList>
+
+	<!-- IAS -->
+	
+<!--
+	Activate IAS Hold with pitch PID under the following conditions:
+	1.	prop:/aircraft/afcs/ap-master -> value:true (bool)
+	2.	prop:/aircraft/afcs/ver-mode -> value:ias (string)
+	
+	Input Property -> /aircraft/afcs/ias-setting
+	
+	Output Property -> /controls/flight/elevator
+	
+	NOTE: The IAS Hold may be a complicated concept here but actually, it's just holding speed with pitch, not throttle. I THINK the generic FG autopilot uses that, so you could probably take that an simply fine-tune it.
+-->	
+
+	<logic>
+		<input>
+			<and>
+				<equals>
+					<property>/aircraft/afcs/ver-mode</property>
+					<value>ias</value>
+				</equals>
+				<not>
+					<equals>
+						<property>/aircraft/afcs/lat-mode</property>
+						<value>app</value>
+					</equals>
+				</not>
+			</and>
+		</input>
+		<output>/aircraft/afcs/logic/ver-ias</output>
+	</logic>
+	
+	<pid-controller>
+    <debug>false</debug>
+    <enable>
+      <prop>/aircraft/afcs/logic/ver-ias</prop>
+    </enable>
+    <input>
+      <prop>/autopilot/internal/lookahead-10-sec-airspeed-kt</prop>
+    </input>
+    <reference>
+      <prop>/aircraft/afcs/ias-setting</prop>
+    </reference>
+    <output>
+      <prop>/autopilot/internal/target-pitch-deg-ias</prop>
+    </output>
+    <config>
+      <Kp>-1.0</Kp>
+      <beta>1.0</beta>
+      <alpha>0.1</alpha>
+      <gamma>0.0</gamma>
+      <Ti>10</Ti>
+      <Td>0.00001</Td>
+      <u_min>-8.0</u_min>
+      <u_max>12.0</u_max>
+    </config>
+    
+  </pid-controller>
+
+ <pid-controller>
+    <debug>false</debug>
+    <enable>
+      <prop>/aircraft/afcs/logic/ver-ias</prop>
+    </enable>
+    <input>
+      <prop>/orientation/pitch-deg</prop>
+    </input>
+    <reference>
+      <prop>/autopilot/internal/target-pitch-deg-ias</prop>
+    </reference>
+    <output>
+      <!--<prop>/controls/flight/elevator-trim</prop>-->
+      <prop>/autopilot/internal/elevator-cmd</prop>
+    </output>
+    <config>
+      <Kp>-0.008</Kp>
+      <beta>1.0</beta>
+      <alpha>0.1</alpha>
+      <gamma>0.0</gamma>
+      <Ti>10</Ti>
+      <Td>0.00001</Td>
+      <u_min>-1.0</u_min>
+      <u_max>0.3</u_max>
+    </config>
+  </pid-controller>
+	
+	<!-- VS -->
+	
+<!--
+	Activate VS Hold PID under the following conditions:
+	1.	prop:/aircraft/afcs/ap-master -> value:true (bool)
+	2.	prop:/aircraft/afcs/ver-mode -> value:vs (string)
+	
+	Input Property -> /aircraft/afcs/vs-setting
+	
+	Output Property -> /controls/flight/elevator
+-->	
+
+	<logic>
+		<input>
+			<and>
+				<equals>
+					<property>/aircraft/afcs/ver-mode</property>
+					<value>vs</value>
+				</equals>
+				<not>
+					<equals>
+						<property>/aircraft/afcs/lat-mode</property>
+						<value>app</value>
+					</equals>
+				</not>
+			</and>
+		</input>
+		<output>/aircraft/afcs/logic/ver-vs</output>
+	</logic>
+
+	<pid-controller>
+		<debug>false</debug>
+		<enable>
+		  <prop>/aircraft/afcs/logic/ver-vs</prop>
+		</enable>
+		<input>
+		  <prop>/velocities/vertical-speed-fps</prop>
+		</input>
+		<reference>
+		  <prop>/aircraft/afcs/vs-setting</prop>
+		  <scale>0.01667</scale>
+		</reference>
+		<output>
+		  <!--<prop>/controls/flight/elevator-trim</prop>-->
+		  <prop>/autopilot/internal/elevator-cmd</prop>
+		</output>
+		<config>
+		  <Kp>-0.005</Kp>      <!-- proportional gain -->
+		  <beta>1</beta>    <!-- input value weighing factor -->
+		  <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
+		  <gamma>0.0</gamma>  <!-- input value weighing factor for -->
+							  <!-- unfiltered derivative error -->
+		  <Ti>10</Ti>       <!-- integrator time -->
+		  <Td>0.00001</Td>    <!-- derivator time -->
+		  <u_min>-1.0</u_min> <!-- minimum output clamp -->
+		  <u_max>0.3</u_max>  <!-- maximum output clamp -->
+		</config>
+	</pid-controller>
+
+	<!-- ALT -->
+	
+<!--
+	Activate ALT Hold PID under the following conditions:
+	1.	prop:/aircraft/afcs/ap-master -> value:true (bool)
+	2.	prop:/aircraft/afcs/ver-mode -> value:alt (string)
+	
+	Input Property -> /aircraft/afcs/alt-setting
+	
+	Output Property -> /controls/flight/elevator
+-->
+
+	<logic>
+		<input>
+			<and>
+				<equals>
+					<property>/aircraft/afcs/ver-mode</property>
+					<value>alt</value>
+				</equals>
+				<not>
+					<equals>
+						<property>/aircraft/afcs/lat-mode</property>
+						<value>app</value>
+					</equals>
+				</not>
+			</and>
+		</input>
+		<output>/aircraft/afcs/logic/ver-alt</output>
+	</logic>
+
+  <!-- Stage #1 sets target rate of climb based on diff between current agl -->
+  <!-- and target agl. -->
+  <!-- pi-simple-controller>
+    <debug>false</debug>
+    <enable>
+      <prop>/aircraft/afcs/logic/ver-alt</prop>
+    </enable>
+    <input>
+      <prop>/instrumentation/altimeter/indicated-altitude-ft</prop>
+    </input>
+    <reference>
+      <prop>/aircraft/afcs/alt-setting</prop>
+    </reference>
+    <output>
+      <prop>/autopilot/internal/target-climb-rate-fps</prop>
+    </output>
+    <config>
+      <Kp>0.3</Kp>
+      <Ki>0.0</Ki>
+      <u_max><property>/aircraft/afcs/alt-vs-up</property></u_max>
+      <u_min>-25</u_min>
+    </config>
+  </pi-simple-controller-->
+
+  <!-- Stage #2 drives the elevator-trim to achieve the desired climb rate. -->
+  <pid-controller>
+    <debug>false</debug>
+    <enable>
+      <prop>/aircraft/afcs/logic/ver-alt</prop>
+    </enable>
+    <input>
+      <prop>/velocities/vertical-speed-fps</prop>
+    </input>
+    <reference>
+      <prop>/autopilot/internal/target-climb-rate-fps</prop>
+    </reference>
+    <output>
+      <!--<prop>/controls/flight/elevator-trim</prop>-->
+      <prop>/autopilot/internal/elevator-cmd</prop>
+    </output>
+    <config>
+		  <Kp>-0.005</Kp>      <!-- proportional gain -->
+		  <beta>1</beta>    <!-- input value weighing factor -->
+		  <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
+		  <gamma>0.0</gamma>  <!-- input value weighing factor for -->
+							  <!-- unfiltered derivative error -->
+		  <Ti>10</Ti>       <!-- integrator time -->
+		  <Td>0.00001</Td>    <!-- derivator time -->
+		  <u_min>-1.0</u_min> <!-- minimum output clamp -->
+		  <u_max>0.3</u_max>  <!-- maximum output clamp -->
+    </config>
+  </pid-controller>
+
+	<!-- APP -->
+	
+<!--
+	Activate Approach VS Hold PID under the following conditions:
+	1.	prop:/aircraft/afcs/ap-master -> value:true (bool)
+	2.	prop:/aircraft/afcs/ver-mode -> value:app (string)
+	
+	Input Property -> /aircraft/afcs/approach-vs-fps
+	
+	Output Property -> /controls/flight/elevator
+	
+	NOTE: Use this as a vertical speed hold pid (in feet-per-second), it's kinda different with the ATR72, as it's activated along with the lateral APP. So, I'll write a nasal script that sets the required GS Vertical Speed into the input property and you can use that for the PID. But then it's important to note that this needs to be 'quicker' than the normal VS hold.
+-->
+
+	<logic>
+		<input>
+			<and>
+				<property>/aircraft/afcs/ap-master</property>
+				<equals>
+					<property>/aircraft/afcs/lat-mode</property>
+					<value>app</value>
+				</equals>
+				<not>
+					<property>/instrumentation/nav/gs-in-range</property>
+				</not>
+			</and>
+		</input>
+		<output>/aircraft/afcs/logic/ver-hold</output>
+	</logic>
+	
+	<logic>
+		<input>
+			<and>
+				<property>/aircraft/afcs/ap-master</property>
+				<equals>
+					<property>/aircraft/afcs/lat-mode</property>
+					<value>app</value>
+				</equals>
+				<property>/instrumentation/nav/gs-in-range</property>
+			</and>
+		</input>
+		<output>/aircraft/afcs/logic/ver-gs</output>
+	</logic>
+	
+	<pid-controller>
+    <debug>false</debug>
+    <enable>
+      <prop>/aircraft/afcs/logic/ver-gs</prop>
+    </enable>
+    <input>
+      <prop>/velocities/vertical-speed-fps</prop>
+    </input>
+    <reference>
+      <prop>/aircraft/afcs/app-gs-fps</prop>
+    </reference>
+    <output>
+      <prop>/autopilot/internal/elevator-cmd</prop>
+    </output>
+    <!-- config>
+      <Kp>-0.005</Kp>
+      <beta>1</beta>
+      <alpha>0.1</alpha>
+      <gamma>0.0</gamma>
+      <Ti>10</Ti>
+      <Td>0.00002</Td>
+      <u_min>-1.0</u_min>
+      <u_max>1.0</u_max>
+    </config -->
+    <config>
+		  <Kp>-0.005</Kp>      <!-- proportional gain -->
+		  <beta>1</beta>    <!-- input value weighing factor -->
+		  <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
+		  <gamma>0.0</gamma>  <!-- input value weighing factor for -->
+		  <Ti>10</Ti>       <!-- integrator time -->
+		  <Td>0.00001</Td>    <!-- derivator time -->
+		  <u_min>-1.0</u_min> <!-- minimum output clamp -->
+		  <u_max>1.0</u_max>  <!-- maximum output clamp -->
+		</config>
+  </pid-controller>
+  
+  <pid-controller>
+    <debug>false</debug>
+    <enable>
+      <prop>/aircraft/afcs/logic/ver-hold</prop>
+    </enable>
+    <input>
+      <prop>/velocities/vertical-speed-fps</prop>
+    </input>
+    <reference>
+      <value>0.0</value>
+    </reference>
+     <output>
+      <prop>/autopilot/internal/elevator-cmd</prop>
+    </output>
+    <config>
+     <Kp>-0.005</Kp>      <!-- proportional gain -->
+      <beta>1</beta>    <!-- input value weighing factor -->
+      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
+      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
+                          <!-- unfiltered derivative error -->
+      <Ti>10</Ti>       <!-- integrator time -->
+      <Td>0.00001</Td>    <!-- derivator time -->
+      <u_min>-1.0</u_min> <!-- minimum output clamp -->
+      <u_max>1.0</u_max>  <!-- maximum output clamp -->  
+    </config>
+  </pid-controller>
+
+  	<filter>
+		<name>SERVO-DRIVER:elevator-trim</name>
+		<debug>false</debug>
+		<!--<feedback-if-disabled>true</feedback-if-disabled>-->
+		<enable>
+			<prop>/aircraft/afcs/ap-master</prop>
+		</enable>
+		<input>/autopilot/internal/elevator-cmd</input>
+		<output>/controls/flight/elevator-trim</output>
+		<type>noise-spike</type>
+		<max-rate-of-change>0.125</max-rate-of-change>
+	</filter>
+  
+</PropertyList>

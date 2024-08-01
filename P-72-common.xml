@@ -1,0 +1,1155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<sim>
+          <description>Leonardo ATR 72 MP</description>
+  <long-description>
+Leonardo P-72 MP Surveyor, P-72A, P-72 ASW are a twin-turboprop aircrafts optimised for even the most complex maritime patrol mission. The aircraft retains the reliability, maintainability,low lifecycle cost and comfort features of the ATR 72-600 on wich is based, while also including a state-of-the-art mission system, advanced sensors and a complete communication suite. 
+The ATR 72MP features Command, Control, Communications, Computers, Intelligence, Surveillance and Reconnaissance (C4ISR) capabilities which enable the monitoring of sea lane traffic, fisheries protection, counter smuggling and counter drug trafficking operations, exclusive economic zones (EEZ) patrol, as well as Search and Rescue (SAR) operations.
+  </long-description>
+          <author>Paolo Amoroso, Narendran Muraleedharan, Donald Belcham, camelon, ot-666
+          </author>
+		<flaps>
+			<setting>0.000</setting> <!-- Flaps up -->
+			<setting>0.428</setting> <!-- 15 Degrees (take-off) -->
+			<!-- setting>0.714</setting --> <!-- 25 Degrees (light landing) ONLY APPLICABLE FOR ATR42 -->
+			<setting>1.000</setting> <!-- 35 Degrees (heavy landing) -->
+		</flaps>
+
+		<panel>
+			<path></path>
+		</panel>
+	
+		<chase-distance-m>-40</chase-distance-m>
+
+		<sound>
+			<path>Aircraft/P-72/ATR-sound.xml</path>
+		</sound>
+
+		<instrumentation>
+			<path>Aircraft/P-72/Systems/instrumentation.xml</path>
+		</instrumentation>
+
+	<view n="0">
+		<name>Pilot View</name>
+		<type>lookfrom</type>
+		<internal type="bool">true</internal>
+		<cockpit type="bool">true</cockpit>
+		<config>
+			<x-offset-m type="double">-0.54</x-offset-m>
+			<y-offset-m type="double">1.0833</y-offset-m>
+			<z-offset-m type="double">-10.2479</z-offset-m>
+			<pitch-offset-deg>-3</pitch-offset-deg>
+			<default-field-of-view-deg type="double">80.0</default-field-of-view-deg>
+		</config>
+	</view>
+	
+	<view n="101">
+		<name>FMC View</name>
+		<type>lookfrom</type>
+		<internal archive="y">true</internal>
+		<cockpit type="bool">true</cockpit>
+		<config>
+			<from-model type="bool">true</from-model>
+			<from-model-idx type="int">0</from-model-idx>
+			<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+			<x-offset-m type="double">0</x-offset-m>
+			<y-offset-m type="double">1.083</y-offset-m>
+			<z-offset-m type="double">-10.75</z-offset-m>
+			<pitch-offset-deg>-66</pitch-offset-deg>
+			<default-field-of-view-deg type="double">22</default-field-of-view-deg>
+		</config>
+	</view>
+	
+	<view n="102">
+		<name>AFCS View</name>
+		<type>lookfrom</type>
+		<internal archive="y">true</internal>
+		<cockpit type="bool">true</cockpit>
+		<config>
+			<from-model type="bool">true</from-model>
+			<from-model-idx type="int">0</from-model-idx>
+			<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+			<x-offset-m type="double">0</x-offset-m>
+			<y-offset-m type="double">1.08</y-offset-m>
+			<z-offset-m type="double">-10.2479</z-offset-m>
+			<pitch-offset-deg>-12</pitch-offset-deg>
+			<default-field-of-view-deg type="double">30</default-field-of-view-deg>
+		</config>
+	</view>
+	<view n="103">
+		<name>Radio View</name>
+		<type>lookfrom</type>
+		<internal archive="y">true</internal>
+		<cockpit type="bool">true</cockpit>
+		<config>
+			<from-model type="bool">true</from-model>
+			<from-model-idx type="int">0</from-model-idx>
+			<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+			<x-offset-m type="double">0</x-offset-m>
+			<y-offset-m type="double">1.083</y-offset-m>
+			<z-offset-m type="double">-10.45</z-offset-m>
+			<pitch-offset-deg>-90</pitch-offset-deg>
+			<default-field-of-view-deg type="double">55</default-field-of-view-deg>
+		</config>
+	</view>
+	<view n="104">
+		<name>Copilot View</name>
+		<type>lookfrom</type>
+		<internal archive="y">true</internal>
+		<cockpit type="bool">true</cockpit>
+		<config>
+			<from-model type="bool">true</from-model>
+			<from-model-idx type="int">0</from-model-idx>
+			<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+			<x-offset-m type="double">0.54</x-offset-m>
+			<y-offset-m type="double">1.0833</y-offset-m>
+			<z-offset-m type="double">-10.2479</z-offset-m>
+			<pitch-offset-deg>-4</pitch-offset-deg>
+			<default-field-of-view-deg type="double">65</default-field-of-view-deg>
+		</config>
+	</view>
+     <view n="105">
+		<name>Star Safire View</name>
+		<type>lookfrom</type>
+		<internal archive="y">false</internal>
+		<cockpit type="bool">true</cockpit>
+		<config>
+			<from-model type="bool">true</from-model>
+			<from-model-idx type="int">0</from-model-idx>
+			<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+			<x-offset-m type="double">0</x-offset-m>
+			<y-offset-m type="double">-1.28</y-offset-m>
+			<z-offset-m type="double">-5.9</z-offset-m>
+			<pitch-offset-deg>-4</pitch-offset-deg>
+			<default-field-of-view-deg type="double">120</default-field-of-view-deg>
+		</config>
+	</view>
+     <view n="106">
+		<name>Left Observer View</name>
+		<type>lookfrom</type>
+		<internal archive="y">false</internal>
+		<cockpit type="bool">true</cockpit>
+		<config>
+			<from-model type="bool">true</from-model>
+			<from-model-idx type="int">0</from-model-idx>
+			<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+			<x-offset-m type="double">-1.5</x-offset-m>
+			<y-offset-m type="double">0.8</y-offset-m>
+			<z-offset-m type="double">6.5</z-offset-m>
+			<pitch-offset-deg>-4</pitch-offset-deg>
+			<default-field-of-view-deg type="double">80</default-field-of-view-deg>
+		</config>
+	</view>
+     <view n="107">
+		<name>Right Observer View</name>
+		<type>lookfrom</type>
+		<internal archive="y">false</internal>
+		<cockpit type="bool">true</cockpit>
+		<config>
+			<from-model type="bool">true</from-model>
+			<from-model-idx type="int">0</from-model-idx>
+			<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+			<x-offset-m type="double">1.5</x-offset-m>
+			<y-offset-m type="double">0.8</y-offset-m>
+			<z-offset-m type="double">6.5</z-offset-m>
+			<pitch-offset-deg>-4</pitch-offset-deg>
+			<default-field-of-view-deg type="double">80</default-field-of-view-deg>
+		</config>
+	</view>
+
+           <submodels>
+			<serviceable>true</serviceable>
+			<path>Aircraft/P-72/Models/Submodels.xml</path>
+		</submodels>
+
+		<menubar>
+			<default>
+                <menu n="3">
+                    <item n="0">
+		                <label>Autopilot Dialog</label>
+		                <enabled type="bool">false</enabled>
+                        <binding>
+							<command>nasal</command>
+							<script>
+							<!-- Disabled -->
+							</script>
+                        </binding>
+                    </item>
+                    <item n="1">
+		                <label>Route Manager</label>
+		                <enabled type="bool">false</enabled>
+                    </item>
+                    <item n="2">
+		                <label>Previous Waypoint</label>
+		                <enabled type="bool">true</enabled>
+                        <binding>
+							<command>nasal</command>
+							<script>
+								var current_wp = getprop("/aircraft/fmc/active-rte/current-wp");
+
+								setprop("/aircraft/fmc/active-rte/current-wp", current_wp - 1);
+							</script>
+                        </binding>
+                    </item>
+                    <item n="3">
+		                <label>Next Waypoint</label>
+		                <enabled type="bool">true</enabled>
+                        <binding>
+							<command>nasal</command>
+							<script>
+								var current_wp = getprop("/aircraft/fmc/active-rte/current-wp");
+
+								setprop("/aircraft/fmc/active-rte/current-wp", current_wp + 1);
+							</script>
+                        </binding>
+                    </item>
+                </menu>
+				
+				<menu n="5">
+					<item n="3">
+						<label>Radio Settings</label>
+						<enabled type="bool">false</enabled>
+                        <binding>
+							<command>nasal</command>
+							<script>
+							<!-- Disabled -->
+							</script>
+                        </binding>
+					</item>
+				</menu>
+				
+                <menu n="100">
+                	<label>ATR 72MP</label>
+                    <item n="0">
+		                <label>Autostart Aircraft</label>
+                        <binding>
+							<command>nasal</command>
+							<script>
+								atr.autostart();
+							</script>
+                        </binding>
+                    </item>
+                    <item>
+						<label>Select Livery</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							 aircraft.livery.dialog.open();
+							</script>
+						</binding>
+					</item>
+                           <item>
+                                <label>Aircraft Configuration</label>
+                                <binding>
+                                <command>nasal</command>
+                                <script>atr.load_dialog1.toggle()</script>
+        </binding>
+                           </item>
+					<item>
+						<label>Toggle Tail Support</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							
+								if (getprop("/fdm/jsbsim/contact/unit[5]/z-position") == -5.516) {
+								
+									setprop("/fdm/jsbsim/contact/unit[5]/z-position", -65);
+								
+								} else {
+								
+									setprop("/fdm/jsbsim/contact/unit[5]/z-position", -5.516);
+									
+								
+								}
+							
+							</script>
+						</binding>
+					</item>
+					
+					<item>
+						<label>Toggle Reverse-Pitch (r)</label>
+						<binding>
+							<command>property-toggle</command>
+							<property>/controls/reverse-pitch</property>
+						</binding>
+					</item>
+					<item>
+						<label>Tiller Steering</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+								var tiller = gui.Dialog.new("/sim/gui/dialogs/tiller/dialog","Aircraft/P-72/Systems/tiller-dlg.xml");
+								tiller.open();
+							</script>
+						</binding>
+					</item>
+					<item>
+						<name>Lights</name>
+						<label>NAV Display Settings</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							 var nav_display_settings = gui.Dialog.new("sim/gui/dialogs/nav-display-settings/dialog", "Aircraft/P-72/Systems/nd-settings-dlg.xml");
+							 nav_display_settings.open();
+							</script>
+						</binding>
+					</item>
+					<!-- item>
+						<name>fmc</name>
+						<label>Flight Management Computer</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							 atr.fmc_gui.open();
+							</script>
+						</binding>
+					</item -->
+                </menu>
+			</default>
+		</menubar>
+		
+	<systems>
+		<autopilot>
+			<name>Cabin Pressurization</name>
+			<path>Aircraft/P-72/Systems/pressurization.xml</path>
+		</autopilot>
+		<!-- Disable Generic FlightGear Electrical System for my nasal system to work -->
+		<electrical>
+			<path></path>
+		</electrical>
+		<!-- Automatic Flight Control System PIDs -->
+		<autopilot>
+				<name>AFCS Lateral Axis</name>
+				<path>Aircraft/P-72/Systems/AFCS_lateral.xml</path>
+		</autopilot>
+		<autopilot>
+				<name>AFCS Vertical Axis</name>
+				<path>Aircraft/P-72/Systems/AFCS_vertical.xml</path>
+		</autopilot>
+		<!-- Autopilot Internal Helpers -->
+		<autopilot>
+			<name>Autopilot Internal Helpers</name>
+			<path>Aircraft/Generic/generic-autopilot-helper.xml</path>
+		</autopilot>
+		
+	</systems>
+	
+	<flight-recorder>
+			<replay-config type="int">0</replay-config>
+			<config n="0" include="/Aircraft/Generic/flightrecorder/generic-jet.xml">
+				<name type="string">P-72 Flight Recorder</name>
+				<!-- Custom properties -->
+				<signal>
+					<type>float</type>
+					<property type="string">/aircraft/wingflex</property>
+					<interpolation>linear</interpolation>
+				</signal>
+				<signal>
+					<type>float</type>
+					<property type="string">/gear/gear[0]/compression-ft</property>
+					<interpolation>linear</interpolation>
+				</signal>
+				<signal>
+					<type>float</type>
+					<property type="string">/gear/gear[1]/compression-ft</property>
+					<interpolation>linear</interpolation>
+				</signal>
+				<signal>
+					<type>float</type>
+					<property type="string">/gear/gear[2]/compression-ft</property>
+					<interpolation>linear</interpolation>
+				</signal>
+				<signal>
+					<type>float</type>
+					<property type="string">/engines/engine[0]/thruster/prop_rpm</property>
+					<interpolation>linear</interpolation>
+				</signal>
+				<signal>
+					<type>float</type>
+					<property type="string">/engines/engine[0]/thruster/prop_pitch</property>
+					<interpolation>linear</interpolation>
+				</signal>
+				<signal>
+					<type>float</type>
+					<property type="string">/engines/engine[1]/thruster/prop_rpm</property>
+					<interpolation>linear</interpolation>
+				</signal>
+				<signal>
+					<type>float</type>
+					<property type="string">/engines/engine[1]/thruster/prop_pitch</property>
+					<interpolation>linear</interpolation>
+				</signal>
+			</config>
+		</flight-recorder>
+		
+		<help>
+			<title>ATR 72MP Specific Keys</title>
+			  <key>
+				<name>r</name>
+				<desc>Toggle Reverse Pitch</desc>
+			  </key>
+			  <key>
+				<name>j</name>
+				<desc>Steer Tiller Left</desc>
+			  </key>
+			  <key>
+				<name>k</name>
+				<desc>Center Tiller</desc>
+			  </key>
+			  <key>
+				<name>l</name>
+				<desc>Steer Tiller Right</desc>
+			  </key>
+                  <text>
+                  <label>ATR 72ASW Operation Keys</label>
+                  </text>
+                  <key>
+				<name>q/Q</name>
+				<desc>DASS Flares Launcher</desc>
+			  </key>
+                  <key>
+				<name>S</name>
+				<desc>Sonobuoy Launcher</desc>
+			  </key>
+                  <key>
+				<name>H/u</name>
+				<desc>Pilon 1 Launch</desc>
+			  </key>
+                  <key>
+				<name>K/i</name>
+				<desc>Pilon 2 Launch</desc>
+			  </key>
+                  <key>
+				<name>N/n/j</name>
+				<desc>Pilon 3 Launch</desc>
+			  </key>
+                  <key>
+				<name>M/m/J</name>
+				<desc>Pilon 4 Launch</desc>
+			  </key>
+                  <text>_____LEONARDO_____
+                        _____ATR 72 MP_____
+                        _____ATR 72 ASW_____
+                   
+                   Select the PAYLOAD from the main menu.
+                   Payload depends on avaiable pylons.
+                   
+                   Select AIRCRAFT CONFIGURATION for:
+                   - Search Light: SAR and C/SAR Missions
+                   - Reload Weapons: It is possible to reload 
+                     the aircraft payload. This Operations 
+                     should be carried out on the ground.
+                   
+                            PYLONS 1/2:
+                             H/K: MU90
+                             u/i: SOM-J
+                             PYLONS 3/4:
+                             N/M: MU90
+                             n/m: SOM-J
+                             j/J: Marte-ER</text>
+		</help>
+	</sim>
+	
+	<aircraft>
+		<prop-brake type="bool">false</prop-brake>
+		<afcs>
+			<lat-mode type="string">hdg</lat-mode>
+			<ver-mode type="string">alt</ver-mode>
+			<ap-master type="bool">false</ap-master>
+			<yd type="bool">false</yd>
+			<hdg-setting type="int">0</hdg-setting>
+			<crs1 type="int">0</crs1>
+			<crs2 type="int">0</crs2>
+			<alt-setting type="int">10000</alt-setting>
+			<vs-setting type="int">0</vs-setting>
+			<ias-setting type="int">180</ias-setting>
+			<bank-limit type="int">27</bank-limit>
+			<crz-alt type="string">FL160</crz-alt>
+		</afcs>
+		<collins>
+			<nav0-editmode type="string">standby</nav0-editmode>
+			<nav0-editmode-int type="int">0</nav0-editmode-int>
+			<nav0-mode typpe="int">1</nav0-mode>
+			<nav1-mode typpe="int">1</nav1-mode>
+			<com0-mode typpe="int">1</com0-mode>
+			<com1-mode typpe="int">1</com1-mode>
+			<com0-editmode type="string">standby</com0-editmode>
+			<com0-editmode-int type="int">0</com0-editmode-int>
+			<adf0-editmode type="string">standby</adf0-editmode>
+			<adf0-editmode-int type="int">0</adf0-editmode-int>
+			<nav1-editmode type="string">standby</nav1-editmode>
+			<nav1-editmode-int type="int">0</nav1-editmode-int>
+			<com1-editmode type="string">standby</com1-editmode>
+			<com1-editmode-int type="int">0</com1-editmode-int>
+			<adf1-editmode type="string">standby</adf1-editmode>
+			<adf1-editmode-int type="int">0</adf1-editmode-int>
+			<xpndr-editmode type="string">standby</xpndr-editmode>
+			<xpndr-editmode-int type="int">0</xpndr-editmode-int>
+			<tcas-editmode type="string">standby</tcas-editmode>
+			<tcas-editmode-int type="int">0</tcas-editmode-int>
+		</collins>
+		
+		<fmc>
+			<time>
+				<start-sec type="int">0</start-sec>
+				<utc type="string">0000</utc>
+				<utc-set type="string">0000</utc-set>
+			</time>
+			<gps>
+				<accur type="string">LO</accur>
+			</gps>
+			<company>
+				<db-id type="string">N/A</db-id>
+				<db-date type="string">----------/--</db-date>
+			</company>
+			<navdata>
+				<db-id type="string">N/A</db-id>
+				<db-date type="string">----------/--</db-date>
+			</navdata>
+			<perf>
+				<trans-alt type="int">14000</trans-alt>
+				<crz-alt type="string">FL160</crz-alt>
+				<climb type="string">170/0.55/5.5</climb>
+				<cruise type="string">210/0.55M</cruise>
+				<descent>240/0.55/3.0</descent>
+				<spd-trans type="string">250/10000</spd-trans>
+			</perf>
+			<active-rte>
+				<num type="int">0</num>
+				<current-wp type="int">0</current-wp>
+				<wp>
+					<id type="string"></id>
+					<alt type="string"></alt>
+				</wp>
+			</active-rte>
+			<rte1>
+				<active type="int">0</active>
+				<origin-arpt type="string">----</origin-arpt>
+				<origin-rwy type="string">---</origin-rwy>
+				<dest-arpt type="string">----</dest-arpt>
+				<dest-rwy type="string">---</dest-rwy>
+				<flt-no type="string">-------</flt-no>
+				<co-rte type="string">----------</co-rte>
+				<dep>
+					<!-- active type="bool">0</active -->
+					<sid type="string"></sid>
+					<current-wp type="int">0</current-wp>
+					<wpts>
+						<num type="int">0</num>
+						<wp>
+							<id type="string"></id>
+							<lat-deg type="float">0</lat-deg>
+							<lon-deg type="float">0</lon-deg>
+							<alt-res type="float">0</alt-res>
+						</wp>
+					</wpts>
+				</dep>
+				<arr>
+					<!-- active type="bool">0</active -->
+					<star type="string"></star>
+					<current-wp type="int">0</current-wp>
+					<wpts>
+						<num type="int">0</num>
+						<wp>
+							<id type="string"></id>
+							<lat-deg type="float">0</lat-deg>
+							<lon-deg type="float">0</lon-deg>
+							<alt-res type="float">0</alt-res>
+						</wp>
+					</wpts>
+				</arr>
+				<rte>
+					<num type="int">0</num>
+					<first type="int">0</first>
+					<entry>
+						<awy type="string">----</awy>
+						<wp type="string">-----</wp>
+					</entry>
+				</rte>
+				<legs>
+					<num type="int">0</num>
+					<first type="int">0</first>
+					<wp>
+						<wp type="string"></wp>
+						<alt type="string"></alt>
+					</wp>
+				</legs>
+			</rte1>
+		</fmc>
+		
+	</aircraft>
+	
+	<controls>
+		<pressurization>
+			<auto-landing-elevation-ft type="double">5000</auto-landing-elevation-ft>
+			<cabin-pressure-cruise-psi type="double">11.3</cabin-pressure-cruise-psi>
+			<cabin-pressure-cruise-alt-ft type="double">7000</cabin-pressure-cruise-alt-ft>
+			<outside-pressure-cruise-psi type="double">6.75</outside-pressure-cruise-psi> <!-- psi at 20,000 ft -->
+			<cruise-alt-ft type="double">20000</cruise-alt-ft> <!-- psi at 20,000 ft -->
+			<auto-descent-max-fps type="double">-6.667</auto-descent-max-fps> <!-- options are -6.667 fps (-400fpm) or -8.333 fps (-500fpm) -->
+			<manual-mode-engaged type="bool">false</manual-mode-engaged>
+			<manual-mode-rate-fps type="double">16.666</manual-mode-rate-fps>
+			<ditch type="bool">false</ditch>
+			<engaged type="bool">false</engaged>
+		</pressurization>	
+		<gear>
+			<tiller-cmd-norm type="double">0</tiller-cmd-norm>
+			<tiller-enabled type="bool">false</tiller-enabled>
+			<brake-parking type="double">1</brake-parking>
+		</gear>
+		<lighting>
+			<nav-lights type="bool">false</nav-lights>
+			<beacon type="bool">false</beacon>
+			<strobe type="bool">false</strobe>
+		</lighting>
+		<electric>
+			<engine n="0">
+				<generator type="bool">false</generator>
+				<fuel-pump type="bool">false</fuel-pump>
+			</engine>
+			<engine n="1">
+				<generator type="bool">false</generator>
+				<fuel-pump type="bool">false</fuel-pump>
+			</engine>
+		</electric>
+		<elec_panel>
+			<gen1 type="bool">false</gen1>
+			<gen2 type="bool">false</gen2>
+			<batt-main type="bool">false</batt-main>
+			<batt-emer type="bool">false</batt-emer>
+			<ext-pwr type="bool">false</ext-pwr>
+		</elec_panel>
+		<engines>
+			<engine n="0">
+				<master-alt type="bool">true</master-alt>
+				<master-bat type="bool">true</master-bat>
+			</engine>
+			<engine n="1">
+				<master-alt type="bool">true</master-alt>
+				<master-bat type="bool">true</master-bat>
+			</engine>
+		</engines>
+	</controls>
+	
+	<instrumentation>
+		<adu>
+			<brt type="float">0.6</brt>
+		</adu>
+		<nav>
+			<radials>
+				<selected-deg type="int">0</selected-deg>
+			</radials>
+		</nav>
+		<nav n="1">
+			<radials>
+				<selected-deg type="int">0</selected-deg>
+			</radials>
+		</nav>
+		<tcas>
+            <serviceable type="bool">true</serviceable>
+            <inputs>
+                <mode type="int">3</mode>       <!-- 0=off, 1=standby, 2=TA-only, 3=auto(TA/RA) -->
+            </inputs>
+            <!--voice>
+                <file-prefix type="string">Sounds/tcas/</file-prefix>
+            </voice-->
+            <speaker>                           <!-- Speaker Configuration -->
+                <max-dist type="double">6</max-dist>        <!-- Max. distance where speaker is heard -->
+                <reference-dist type="double"> 2 </reference-dist> <!-- Distance to pilot -->
+                <volume type="double"> 1 </volume>          <!-- Volume at reference distance -->
+            </speaker>
+            <range type="int">20</range>
+        </tcas>
+        <nd>
+            <radar-texture-path type="string">Aircraft/P-72/Models/Instruments/EHSI/radar.png</radar-texture-path>
+            <symbol-texture-path type="string">Aircraft/P-72/Models/Instruments/EHSI/symbols.png</symbol-texture-path>
+            <font>
+                <color>
+                    <red type="float">0.7</red>
+                    <green type="float">0.7</green>
+                    <blue type="float">0.7</blue>
+                    <alpha type="float">1</alpha>
+                </color>
+                <name type="string">helvetica_bold.txf</name>
+                <size type="float">14</size>
+                <line-spacing type="float">0.01</line-spacing>
+            </font>
+            <serviceable type="bool">true</serviceable>
+            <range type="int" archive="y">20</range>
+            <aircraft-heading-up type="bool">true</aircraft-heading-up>
+            <heading-up-deg type="float">0.01</heading-up-deg>
+            <x-center type="float">0.5</x-center>
+            <y-center type="float">0.5</y-center>
+            <display>
+                <arpt type="bool">0</arpt>
+                <vor type="bool">0</vor>
+                <fix type="bool">0</fix>
+            </display>
+            <line-width type="double">3</line-width>
+        </nd>
+        <tcas-display>
+            <radar-texture-path type="string">Aircraft/P-72/Models/Instruments/EHSI/tcas-display.png</radar-texture-path>
+            <symbol-texture-path type="string">Aircraft/P-72/Models/Instruments/EHSI/symbols.png</symbol-texture-path>
+            <font>
+                <color>
+                    <red type="float">0.7</red>
+                    <green type="float">0.7</green>
+                    <blue type="float">0.7</blue>
+                    <alpha type="float">1</alpha>
+                </color>
+                <name type="string">helvetica_bold.txf</name>
+                <size type="float">14</size>
+                <line-spacing type="float">0.01</line-spacing>
+            </font>
+            <serviceable type="bool">true</serviceable>
+            <range type="int" archive="y">20</range>
+            <aircraft-heading-up type="bool">true</aircraft-heading-up>
+            <heading-up-deg type="float">0.01</heading-up-deg>
+            <x-center type="float">0.5</x-center>
+            <y-center type="float">0.5</y-center>
+            <display>
+                <tcas type="bool">1</tcas>
+            </display>
+            <line-width type="double">3</line-width>
+        </tcas-display>
+        <nd-settings>
+            <map type="bool">0</map>
+            <tcas type="bool">1</tcas>
+            <wx type="bool">0</wx>
+            <apt type="bool">1</apt>
+            <apt-id type="bool">1</apt-id>
+            <vor type="bool">1</vor>
+            <vor-id type="bool">1</vor-id>
+        </nd-settings>
+        <fmc>
+			<input type="string"></input>
+			<brt-norm type="float">0</brt-norm>
+        </fmc>
+		<mk-viii>                           <!-- http://wiki.flightgear.org/index.php/GPWS -->
+			<serviceable>true</serviceable>   <!-- EGPWS_ENABLE -->
+
+			<configuration-module>
+				<category-1>   0 </category-1>  <!-- AIRCRAFT_MODE_TYPE_SELECT -->
+				<category-3>   2 </category-3>  <!-- POSITION_INPUT_SELECT -->
+				<category-4>   9 </category-4>  <!-- ALTITUDE_CALLOUTS -->
+				<category-5>   0 </category-5>  <!-- AUDIO_MENU_SELECT -->
+				<category-6>   1 </category-6>  <!-- TERRAIN_DISPLAY_SELECT -->
+				<category-7> 124 </category-7>  <!-- OPTIONS_SELECT_GROUP_1 -->
+				<category-8>   2 </category-8>  <!-- RADIO_ALTITUDE_INPUT_SELECT -->
+				<category-9>   3 </category-9>  <!-- NAVIGATION_INPUT_SELECT -->
+				<category-10>  6 </category-10> <!-- ATTITUDE_INPUT_SELECT -->
+				<category-13>  7 </category-13> <!-- INPUT_OUTPUT_DISCRETE_TYPE_SELECT -->
+				<category-14>  0 </category-14> <!-- AUDIO_OUTPUT_LEVEL -->
+			</configuration-module>
+
+			<inputs>                          <!-- Module I/O -->
+				<arinc429>
+					<decision-height-ncd> false </decision-height-ncd>
+					<decision-height> 200 </decision-height>
+				</arinc429>
+			</inputs>
+
+			<speaker>                         <!-- Speaker Configuration -->
+				<max-dist> 2 </max-dist>        <!-- Max. distance where speaker is heard -->
+				<reference-dist> 1 </reference-dist> <!-- Distance to pilot -->
+				<volume> 1 </volume>          <!-- Volume at reference distance -->
+			</speaker>
+
+			<voice>
+				<file-prefix type="string">Sounds/mk-viii/</file-prefix>
+			</voice>
+	    </mk-viii>
+        <dme n="0">
+            <serviceable>true</serviceable>
+            <frequencies>
+                <source>/instrumentation/nav[0]/frequencies/selected-mhz</source>
+            </frequencies>
+        </dme>
+        <dme n="1">
+            <serviceable>true</serviceable>
+            <frequencies>
+                <source>/instrumentation/nav[1]/frequencies/selected-mhz</source>
+            </frequencies>
+        </dme>	
+		<pressurization>
+			<cabin-altitude-ft>0</cabin-altitude-ft>
+		</pressurization>
+	</instrumentation>
+
+	<consumables>
+		<fuel>
+			<tank n="0">
+				<name>Left Wing Fuel Tank</name>
+			</tank>
+			<tank n="1">
+				<name>Right Wing Fuel Tank</name>
+			</tank>
+			<tank n="2">
+				<name>Left Feeder Compartment</name>
+			</tank>
+			<tank n="3">
+				<name>Right Feeder Compartment</name>
+			</tank>
+		</fuel>
+	</consumables>
+
+	<input>
+		<keyboard>
+			<key n="357">
+				<name>Up</name>
+				<repeatable type="bool">true</repeatable>
+				  <mod-alt>
+				   <desc>Tilt View Up</desc>
+				   <binding>
+					<command>nasal</command>
+					<script>
+						setprop("/sim/current-view/pitch-offset-deg", getprop("/sim/current-view/pitch-offset-deg") + 1);
+					</script>
+				   </binding>
+				  </mod-alt>
+			</key>
+			<key n="359">
+				<name>Down</name>
+				<repeatable type="bool">true</repeatable>
+				  <mod-alt>
+				   <desc>Tilt View Down</desc>
+				   <binding>
+					<command>nasal</command>
+					<script>
+						setprop("/sim/current-view/pitch-offset-deg", getprop("/sim/current-view/pitch-offset-deg") - 1);
+					</script>
+				   </binding>
+				  </mod-alt>
+			</key>
+			<key n="356">
+				<name>Left</name>
+				<repeatable type="bool">true</repeatable>
+				  <mod-alt>
+				   <desc>Pan View Left</desc>
+				   <binding>
+					<command>nasal</command>
+					<script>
+						setprop("/sim/current-view/heading-offset-deg", getprop("/sim/current-view/heading-offset-deg") + 1);
+					</script>
+				   </binding>
+				  </mod-alt>
+			</key>
+			<key n="358">
+				<name>Right</name>
+				<repeatable type="bool">true</repeatable>
+				  <mod-alt>
+				   <desc>Pan View Right</desc>
+				   <binding>
+					<command>nasal</command>
+					<script>
+						setprop("/sim/current-view/heading-offset-deg", getprop("/sim/current-view/heading-offset-deg") - 1);
+					</script>
+				   </binding>
+				  </mod-alt>
+			</key>
+			
+			<key n="114">
+				<name>r</name>
+				<repeatable type="bool">false</repeatable>
+				<desc>Toggle Reverse Pitch</desc>
+				<binding>
+					<command>property-toggle</command>
+					<property>/controls/reverse-pitch</property>
+				</binding>
+			</key>
+			
+			<key n="106">
+				<name>j</name>
+				<repeatable type="bool">true</repeatable>
+				<desc>Steer Left (Tiller)</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+						setprop("/controls/gear/tiller-cmd-norm", getprop("/controls/gear/tiller-cmd-norm") - (1/70));
+					</script>
+				</binding>
+			</key>
+			
+			<key n="107">
+				<name>k</name>
+				<repeatable type="bool">true</repeatable>
+				<desc>Center Tiller</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+						setprop("/controls/gear/tiller-cmd-norm", 0);
+					</script>
+				</binding>
+			</key>
+			
+			<key n="108">
+				<name>l</name>
+				<repeatable type="bool">true</repeatable>
+				<desc>Steer Right (Tiller)</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+						setprop("/controls/gear/tiller-cmd-norm", getprop("/controls/gear/tiller-cmd-norm") + (1/70));
+					</script>
+				</binding>
+			</key>
+
+                <key n="113">
+		          <name>q</name>
+		          <desc>Flare release</desc>
+		          <binding>
+			          <command>property-assign</command>
+			          <property>/controls/armament/flares1</property>
+			          <value>1</value>
+		          </binding>
+		          <mod-up>
+			     <binding>
+				     <command>property-assign</command>
+				     <property>/controls/armament/flares1</property>
+				<value>0</value>
+			     </binding>
+		          </mod-up>
+	          </key>
+
+                <key n="83">
+		          <name>S</name>
+		          <desc>Sonobuoy release</desc>
+		          <binding>
+			          <command>property-assign</command>
+			          <property>/controls/armament/sonobuoy-release</property>
+			          <value>1</value>
+		          </binding>
+		          <mod-up>
+			     <binding>
+				     <command>property-assign</command>
+				     <property>/controls/armament/sonobuoy-release</property>
+				<value>0</value>
+			     </binding>
+		          </mod-up>
+	          </key>
+
+               <key n="115">
+		          <name>s</name>
+		          <desc>SAR Raft release</desc>
+		          <binding>
+			          <command>property-assign</command>
+			          <property>/controls/signalS</property>
+			          <value>1</value>
+		          </binding>
+		          <mod-up>
+			     <binding>
+				     <command>property-assign</command>
+				     <property>/controls/signalS</property>
+				<value>0</value>
+			     </binding>
+		          </mod-up>
+	          </key>
+
+    <key n="72">
+     <name>H</name>
+      <binding> 
+        <command>property-assign</command>
+        <property>controls/signal1</property>
+        <value>true</value>
+      </binding>
+    </key>
+
+    <key n="75">
+      <name>K</name>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/signal2</property>
+        <value>true</value>
+      </binding>
+    </key>
+
+    <key n="117">
+     <name>u</name>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/signal3</property>
+        <value>true</value>
+      </binding>
+    </key>
+
+    <key n="105">
+      <name>i</name>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/signal4</property>
+        <value>true</value>
+      </binding>
+    </key>
+
+    <key n="78">
+      <name>N</name>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/signal5</property>
+        <value>true</value>
+      </binding>
+    </key>
+
+    <key n="77">
+      <name>M</name>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/signal6</property>
+        <value>true</value>
+      </binding>
+    </key>
+
+    <key n="110">
+      <name>n</name>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/signal7</property>
+        <value>true</value>
+      </binding>
+    </key>
+
+    <key n="109">
+      <name>m</name>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/signal8</property>
+        <value>true</value>
+      </binding>
+    </key>
+
+    <key n="106">
+      <name>j</name>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/signal9</property>
+        <value>true</value>
+      </binding>
+    </key>
+
+    <key n="74">
+      <name>J</name>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/signal10</property>
+        <value>true</value>
+      </binding>
+    </key>
+
+    <key n="81">
+         <name>Q</name>
+         <desc>Reset view</desc>
+          <binding>
+           <command>nasal</command>
+           <script>
+          setprop("sim/current-view/field-of-view",      getprop("sim/current-view/config/default-field-of-view-deg"));
+          setprop("sim/current-view/heading-offset-deg", getprop("sim/current-view/config/heading-offset-deg"));
+          setprop("sim/current-view/pitch-offset-deg",   getprop("sim/current-view/config/pitch-offset-deg"));
+          setprop("sim/current-view/roll-offset-deg",    getprop("sim/current-view/config/roll-offset-deg"));
+           </script>
+          </binding>
+        </key>
+
+    <key n="21">
+          <name>Ctrl-U</name>
+          <desc>Add 1000ft of emergency altitude</desc>
+          <binding>
+                <command>nasal</command>
+                <script>
+                	controls_p72.emerg_alt();
+                </script>
+            </binding>
+     </key>
+			
+			<!-- Disable Autopilot Dialog from F11 key -->
+			<key n="267">
+				<name>F11</name>
+				<desc>Pop up autopilot dialog</desc>
+				<binding>
+					<command>dialog-show</command>
+					<dialog-name></dialog-name>
+				</binding>
+			</key>
+			
+			<!-- Disable Radio Settings Dialog from F12 key -->
+			<key n="268">
+				<name>F12</name>
+				<desc>Pop up radio settings dialog</desc>
+				<binding>
+					<command>dialog-show</command>
+					<dialog-name></dialog-name>
+				</binding>
+			</key>
+			
+		</keyboard>
+	</input>
+
+	<nasal>
+		<fgfs>
+			<file>Aircraft/P-72/Nasal/FGversion.nas</file>
+		</fgfs>
+		<walk>
+			<file>Aircraft/P-72/Nasal/walk.nas</file>
+		</walk>
+		<loader>
+			<file>Aircraft/P-72/Nasal/canvas/loader.nas</file>
+		</loader>
+		<!-- gui>
+			<file>Aircraft/P-72/Nasal/FMC/fmc.nas</file>
+		</gui -->
+		<devel>
+			<file>Aircraft/P-72/Devel/parse_dat.nas</file>
+		</devel>
+		<procedures>
+			<file>Aircraft/P-72/Nasal/procedures/fmsDB.nas</file>
+			<file>Aircraft/P-72/Nasal/procedures/fmsWP.nas</file>
+			<file>Aircraft/P-72/Nasal/procedures/fmsTP.nas</file>
+			<file>Aircraft/P-72/Nasal/procedures/fmsTransition.nas</file>
+		</procedures>
+		<fmc>
+			<file>Aircraft/P-72/Nasal/FMC/gps.nas</file>
+			<file>Aircraft/P-72/Nasal/FMC/functions/load-navdata.nas</file>
+			<file>Aircraft/P-72/Nasal/FMC/fmc-screen.nas</file>
+			<file>Aircraft/P-72/Nasal/FMC/fmc-main.nas</file>
+			<file>Aircraft/P-72/Nasal/FMC/functions/active-rte.nas</file>
+			<file>Aircraft/P-72/Nasal/FMC/functions/rte.nas</file>
+			<file>Aircraft/P-72/Nasal/FMC/functions/rtelegs.nas</file>
+			<file>Aircraft/P-72/Nasal/FMC/functions/awy2legs.nas</file>
+			<file>Aircraft/P-72/Nasal/FMC/pages/ident.nas</file>
+			<file>Aircraft/P-72/Nasal/FMC/pages/posref.nas</file>
+			<file>Aircraft/P-72/Nasal/FMC/pages/vnav.nas</file>
+			<file>Aircraft/P-72/Nasal/FMC/pages/rte1.nas</file>
+			<file>Aircraft/P-72/Nasal/FMC/pages/rte1legs.nas</file>
+			<file>Aircraft/P-72/Nasal/FMC/afcs-nav.nas</file>
+			<file>Aircraft/P-72/Nasal/FMC/pages/progress.nas</file>
+			<file>Aircraft/P-72/Nasal/FMC/pages/deparrindex.nas</file>
+			<file>Aircraft/P-72/Nasal/FMC/pages/departures.nas</file>
+			<file>Aircraft/P-72/Nasal/FMC/pages/arrivals.nas</file>
+		</fmc>
+		<atr>
+			<file>Aircraft/P-72/Nasal/autostart.nas</file>
+			<file>Aircraft/P-72/Engines/propeller.nas</file>
+			<file>Aircraft/P-72/Nasal/general_loop.nas</file>
+                <file>Aircraft/P-72/Nasal/dialog.nas</file>
+			<file>Aircraft/P-72/Nasal/electrical.nas</file>
+			<file>Aircraft/P-72/Nasal/ccas.nas</file>
+			<file>Aircraft/P-72/Nasal/adu.nas</file>
+			<file>Aircraft/P-72/Nasal/brakesystem.nas</file>
+			<file>Aircraft/P-72/Nasal/ohpanel.nas</file>
+                <file>Aircraft/P-72/Nasal/weapons.nas</file>
+		</atr>
+		<hydraulics>
+			<file>Aircraft/P-72/Nasal/hydraulics/common.nas</file>
+			<file>Aircraft/P-72/Nasal/hydraulics/green.nas</file>
+			<file>Aircraft/P-72/Nasal/hydraulics/blue.nas</file>
+			<file>Aircraft/P-72/Nasal/hydraulics/brakes.nas</file>
+			<file>Aircraft/P-72/Nasal/hydraulics/hyd_loop.nas</file>
+			<file>Aircraft/P-72/Nasal/hydraulics/brk_loop.nas</file>
+		</hydraulics>
+		<!-- arducockpit>
+			<file>Aircraft/P-72/Nasal/yoke.nas</file>
+		</arducockpit -->
+	</nasal>
+
+</PropertyList>

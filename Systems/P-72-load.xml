@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <name>ATR 72MP Configuration</name>
+  <layout>vbox</layout>
+  <modal>false</modal>
+  <draggable>true</draggable>
+  <resizable>false</resizable>
+  <width>200</width>
+
+  <group>
+
+    <layout>hbox</layout>
+
+    <empty>
+      <stretch>false</stretch>
+    </empty>
+    <text>
+      <label>ATR 72MP Configuration</label>
+    </text>
+    <empty><stretch>false</stretch></empty>
+
+    <button>
+      <legend/>
+      <key>Esc</key>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <binding>
+        <command>nasal</command>
+        <script>atr.load_dialog1.toggle()</script>
+      </binding>
+    </button>
+
+  </group>
+
+  <hrule/>
+
+  <group>
+
+    <layout>vbox</layout>
+    <padding>3</padding>
+    <checkbox>
+      <halign>center</halign>
+      <label>Search Light</label>
+      <property>/sim/model/show-Search-Light-A</property>
+      <property>/sim/model/show-Search-Light-B</property>
+      <live>true</live>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/model/show-Search-Light-A</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/model/show-Search-Light-B</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+      </binding>
+      <binding>
+        <command>dialog-update</command>
+      </binding>
+    </checkbox>
+
+   </group>
+
+   <hrule/>
+
+   <group>
+
+    <layout>vbox</layout>
+    <button>
+        <row>0</row>
+        <legend>Clean Configuration</legend>
+        <binding>
+          <command>property-assign</command>
+          <property>payload/weight[3]/selected</property>
+          <value>Empty</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>payload/weight[4]/selected</property>
+          <value>Empty</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>payload/weight[5]/selected</property>
+          <value>Empty</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>payload/weight[6]/selected</property>
+          <value>Empty</value>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>
+          if (!getprop("gear/gear[0]/wow")) {
+            screen.log.write("This is only possible on ground.");
+            return;
+          }
+          if (getprop("gear/gear[0]/position-norm")) {
+            screen.log.write("Pylons cleared.");
+          }
+          </script>
+        </binding>
+      </button>
+
+      <layout>vbox</layout>
+      <button>
+        <row>0</row>
+        <legend>ASW Configuration</legend>
+        <binding>
+          <command>property-assign</command>
+          <property>payload/weight[3]/selected</property>
+          <value>MU90 Impact</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>payload/weight[4]/selected</property>
+          <value>MU90 Impact</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>payload/weight[5]/selected</property>
+          <value>MU90 Impact</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>payload/weight[6]/selected</property>
+          <value>MU90 Impact</value>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>
+          if (!getprop("gear/gear[0]/wow")) {
+            screen.log.write("This is only possible on ground.");
+            return;
+          }
+          if (getprop("gear/gear[0]/position-norm")) {
+            screen.log.write("ASW Weapons ready.");
+          }
+          </script>
+        </binding>
+      </button>
+
+      <layout>vbox</layout>
+      <button>
+        <row>0</row>
+        <legend>ASuW Configuration</legend>
+        <binding>
+          <command>property-assign</command>
+          <property>payload/weight[3]/selected</property>
+          <value>MU90 Impact</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>payload/weight[4]/selected</property>
+          <value>SOM-J</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>payload/weight[5]/selected</property>
+          <value>SOM-J</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>payload/weight[6]/selected</property>
+          <value>MU90 Impact</value>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>
+          if (!getprop("gear/gear[0]/wow")) {
+            screen.log.write("This is only possible on ground.");
+            return;
+          }
+          if (getprop("gear/gear[0]/position-norm")) {
+            screen.log.write("ASuW Weapons ready.");
+          }
+          </script>
+        </binding>
+      </button>
+
+      <layout>vbox</layout>
+      <button>
+        <row>0</row>
+        <legend>Defensive Anti-Ship</legend>
+        <binding>
+          <command>property-assign</command>
+          <property>payload/weight[3]/selected</property>
+          <value>SOM-J</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>payload/weight[4]/selected</property>
+          <value>SOM-J</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>payload/weight[5]/selected</property>
+          <value>SOM-J</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>payload/weight[6]/selected</property>
+          <value>SOM-J</value>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>
+          if (!getprop("gear/gear[0]/wow")) {
+            screen.log.write("This is only possible on ground.");
+            return;
+          }
+          if (getprop("gear/gear[0]/position-norm")) {
+            screen.log.write("Defence Weapons ready.");
+          }
+          </script>
+        </binding>
+      </button>
+
+      <layout>vbox</layout>
+      <button>
+        <row>0</row>
+        <legend>Attack Anti-Ship</legend>
+        <binding>
+          <command>property-assign</command>
+          <property>payload/weight[3]/selected</property>
+          <value>SOM-J</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>payload/weight[4]/selected</property>
+          <value>SOM-J</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>payload/weight[5]/selected</property>
+          <value>Marte-ER</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>payload/weight[6]/selected</property>
+          <value>Marte-ER</value>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>
+          if (!getprop("gear/gear[0]/wow")) {
+            screen.log.write("This is only possible on ground.");
+            return;
+          }
+          if (getprop("gear/gear[0]/position-norm")) {
+            screen.log.write("Attack Weapons ready.");
+          }
+          </script>
+        </binding>
+      </button>
+
+    </group>
+
+  <hrule/>
+
+   <group>
+
+    <layout>vbox</layout>
+    <button>
+        <row>0</row>
+        <legend>RELOAD WEAPONS</legend>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/signal1</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/signal2</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/signal3</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/signal4</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/signal5</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/signal6</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/signal7</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/signal8</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/signal9</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/signal10</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>
+          if (!getprop("gear/gear[0]/wow")) {
+            screen.log.write("This is only possible on ground.");
+            return;
+          }
+          if (getprop("gear/gear[0]/position-norm")) {
+            screen.log.write("Weapons Reloaded.");
+          }
+          </script>
+        </binding>
+      </button>
+
+    </group>
+
+</PropertyList>

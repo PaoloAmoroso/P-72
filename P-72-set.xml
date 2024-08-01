@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList include="P-72-common.xml">
+
+	<sim>
+		<description>Leonardo ATR 72MP</description>
+		<flight-model>jsb</flight-model>
+		<aero>P-72</aero>
+		<author>Paolo Amoroso, Narendran Muraleedharan, Donald Belcham, camelon, ot-666</author>
+		<engine>pw127f</engine>
+
+		<model>
+			<path>Aircraft/P-72/Models/P-72.xml</path>
+            <livery>
+               <file type="string">AMI</file>
+            </livery>
+		</model>
+           <status>Production</status>
+           <rating>
+               <FDM type="int">     5 </FDM>
+               <systems type="int"> 4 </systems>
+               <cockpit type="int"> 4 </cockpit>
+               <model type="int">   5 </model>
+           </rating>
+           <previews>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-1.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-2.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-3.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-4.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-5.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-6.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-7.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-8.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-9.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-10.png</path>
+			</preview>
+                <preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-11.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-12.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-13.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-14.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-15.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-16.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-17.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-18.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-19.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-20.png</path>
+			</preview>
+                <preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-21.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-22.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-23.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-24.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-25.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-26.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-27.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-28.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-29.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-30.png</path>
+			</preview>
+		</previews>
+           	
+</sim>
+
+<payload>
+		<weight n="0">
+			<name>Crew</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]">380</weight-lb>
+			<max-lb>480</max-lb>
+			<min-lb>100</min-lb>
+		</weight>
+
+		<weight n="1">
+			<name>Cargo</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]">750</weight-lb>
+			<max-lb>960</max-lb>
+			<min-lb>0</min-lb>
+		</weight>
+
+		<weight n="2">
+			<name>Mission Payload</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]">12000</weight-lb>
+			<max-lb>13320</max-lb>
+			<min-lb>0</min-lb>
+		</weight>
+           <weight n="3">
+                 <name>Pylon 1 Left</name>
+                 <opt>
+                     <name>Empty</name>
+                     <lbs>0</lbs>
+                     <weight-lb>0</weight-lb>
+                 </opt>
+                 <opt>
+                     <name>MU90 Impact</name>
+                     <lbs>670</lbs>
+                     <weight-lb>670</weight-lb>
+                 </opt>
+                 <opt>
+                     <name>SOM-J</name>
+                     <lbs>1102</lbs>
+                     <weight-lb>1102</weight-lb>
+                 </opt>
+              </weight>
+              <weight n="4">
+                 <name>Pylon 1 Right</name>
+                 <opt>
+                     <name>Empty</name>
+                     <lbs>0</lbs>
+                     <weight-lb>0</weight-lb>
+                 </opt>
+                 <opt>
+                     <name>MU90 Impact</name>
+                     <lbs>670</lbs>
+                     <weight-lb>670</weight-lb>
+                 </opt>
+                 <opt>
+                     <name>SOM-J</name>
+                     <lbs>1102</lbs>
+                     <weight-lb>1102</weight-lb>
+                 </opt>
+              </weight>
+              <weight n="5">
+                 <name>Pylon 2 Left</name>
+                 <opt>
+                     <name>Empty</name>
+                     <lbs>0</lbs>
+                     <weight-lb>0</weight-lb>
+                 </opt>
+                 <opt>
+                     <name>MU90 Impact</name>
+                     <lbs>670</lbs>
+                     <weight-lb>670</weight-lb>
+                 </opt>
+                 <opt>
+                     <name>SOM-J</name>
+                     <lbs>1102</lbs>
+                     <weight-lb>1102</weight-lb>
+                 </opt>
+                 <opt>
+                     <name>Marte-ER</name>
+                     <lbs>694</lbs>
+                     <weight-lb>694</weight-lb>
+                 </opt>
+              </weight>
+              <weight n="6">
+                 <name>Pylon 2 Right</name>
+                 <opt>
+                     <name>Empty</name>
+                     <lbs>0</lbs>
+                     <weight-lb>0</weight-lb>
+                 </opt>
+                 <opt>
+                     <name>MU90 Impact</name>
+                     <lbs>670</lbs>
+                     <weight-lb>670</weight-lb>
+                 </opt>
+                 <opt>
+                     <name>SOM-J</name>
+                     <lbs>1102</lbs>
+                     <weight-lb>1102</weight-lb>
+                 </opt>
+                 <opt>
+                     <name>Marte-ER</name>
+                     <lbs>694</lbs>
+                     <weight-lb>694</weight-lb>
+                 </opt>
+              </weight>
+	</payload>
+     <limits>
+		   <mass-and-balance>
+			<maximum-takeoff-mass-lbs>50706</maximum-takeoff-mass-lbs>
+		   </mass-and-balance>
+     </limits>
+
+     <help>
+       <text>_____LEONARDO_____
+             _____ATR 72 MP_____
+             _____ATR 72 ASW_____
+                   
+             Select the PAYLOAD from the main menu.
+             Payload depends on avaiable pylons.
+                   
+             Select AIRCRAFT CONFIGURATION for:
+             - Search Light: SAR and C/SAR Missions
+             - Reload Weapons: It is possible to reload 
+               the aircraft payload. This Operations 
+               should be carried out on the ground.
+                   
+                  PYLONS 1/2:
+                   H/K: MU90
+                   u/i: SOM-J
+                  PYLONS 3/4:
+                   N/M: MU90
+                   n/m: SOM-J
+                   j/J: Marte-ER</text>
+	</help>
+
+</PropertyList>
