@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+	<path>ext-lighting2.ac</path>
+
+	<animation>
+		<type>select</type>
+		<object-name>landingl</object-name>
+		<object-name>landingl-cone</object-name>
+		<condition>
+			<property>/controls/lighting/landing-left</property>
+			<property>/systems/electric/outputs/avionics</property>
+			<property>/sim/rendering/rembrandt/enabled</property>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>landingr</object-name>
+		<object-name>landingr-cone</object-name>
+		<condition>
+			<property>/controls/lighting/landing-right</property>
+			<property>/systems/electric/outputs/avionics</property>
+			<property>/sim/rendering/rembrandt/enabled</property>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>taxi</object-name>
+		<object-name>taxi-cone</object-name>
+		<condition>
+			<property>/controls/lighting/taxi</property>
+			<property>/systems/electric/outputs/avionics</property>
+			<property>/sim/rendering/rembrandt/enabled</property>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>light</type>
+		<light-type>spot</light-type>
+		<name>taxi</name>
+		<object-name>taxi-cone</object-name>
+		<nopreview/>
+		<direction><x>-11</x><y>0</y><z>-0.8635</z></direction>
+		<position><x>-11.24</x><y>0</y><z>-0.8635</z></position>
+		<ambient><r>0.95</r><g>0.9</g><b>0.9</b><a>1</a></ambient>
+		<diffuse><r>0.95</r><g>0.9</g><b>0.9</b><a>1</a></diffuse>
+		<specular><r>0.95</r><g>0.9</g><b>0.9</b><a>1</a></specular>
+		<attenuation><c>0.5</c><l>0.07</l><q>0</q></attenuation>
+		<exponent>25.0</exponent>
+		<cutoff>1000</cutoff>
+		<near-m>0.01</near-m>
+		<far-m>150</far-m>
+	</animation>
+	
+	<animation>
+		<type>light</type>
+		<light-type>spot</light-type>
+		<name>landingl</name>
+		<object-name>landingl-cone</object-name>
+		<nopreview/>
+		<direction><x>-1</x><y>-0.25</y><z>-0.08</z></direction>
+		<position><x>-2.47</x><y>-1.14</y><z>-0.856</z></position>
+		<ambient><r>0.95</r><g>0.9</g><b>0.9</b><a>1</a></ambient>
+		<diffuse><r>0.95</r><g>0.9</g><b>0.9</b><a>1</a></diffuse>
+		<specular><r>0.95</r><g>0.9</g><b>0.9</b><a>1</a></specular>
+		<attenuation><c>0.5</c><l>0.07</l><q>0</q></attenuation>
+		<exponent>35.0</exponent>
+		<cutoff>1000</cutoff>
+		<near-m>0.01</near-m>
+		<far-m>200</far-m>
+	</animation>
+	
+	<animation>
+		<type>light</type>
+		<light-type>spot</light-type>
+		<name>land-R-cone</name>
+		<object-name>landingr-cone</object-name>
+		<nopreview/>
+		<direction><x>-1</x><y>0.25</y><z>-0.08</z></direction>
+		<position><x>-2.47</x><y>1.14</y><z>-0.856</z></position>
+		<ambient><r>0.95</r><g>0.9</g><b>0.9</b><a>1</a></ambient>
+		<diffuse><r>0.95</r><g>0.9</g><b>0.9</b><a>1</a></diffuse>
+		<specular><r>0.95</r><g>0.9</g><b>0.9</b><a>1</a></specular>
+		<attenuation><c>0.5</c><l>0.07</l><q>0</q></attenuation>
+		<exponent>35.0</exponent>
+		<cutoff>1000</cutoff>
+		<near-m>0.01</near-m>
+		<far-m>200</far-m>
+	</animation>
+
+</PropertyList>

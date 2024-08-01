@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<name>Trim Indicator</name>
+	<path>trim-ind.ac</path>
+	
+		<animation>
+		<type>material</type>
+		<object-name>rudder-needle</object-name>
+		<object-name>aileron-needle</object-name>
+		<object-name>nose-trim</object-name>
+		<object-name>faceplate</object-name>
+		<diffuse>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</diffuse>
+		<ambient>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</ambient>
+		<specular>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</specular>
+		<emission>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</emission>
+		<condition>
+			<not>
+				<property>/systems/electric/outputs/avionics</property>
+			</not>
+		</condition>
+	</animation>
+	
+	<!-- Pick animations -->
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>aileron-needle</object-name>
+		<property>/controls/flight/aileron-trim</property>
+		<factor>45</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0115</y-m>
+			<z-m>0.0216</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>rudder-needle</object-name>
+		<property>/controls/flight/rudder-trim</property>
+		<factor>45</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0115</y-m>
+			<z-m>-0.0176</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>nose-trim</object-name>
+		<property>/controls/flight/elevator-trim</property>
+		<factor>0.286</factor>
+		<axis>
+			<y>1</y>
+		</axis>
+	</animation>
+		
+</PropertyList>

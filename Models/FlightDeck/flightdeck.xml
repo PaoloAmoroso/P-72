@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList include="animations.xml">
+
+	<name>FlightDeck</name>
+	<path>flightdeck.ac</path>
+	
+	<!-- Animations are included in the separate animations.xml file -->
+	
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>fuel1</object-name>
+		<object-name>fuel2</object-name>
+		<object-name>eec1</object-name>
+		<object-name>eec2</object-name>
+		<object-name>atpcs</object-name>
+		<object-name>cabinpressure</object-name>
+		<object-name>ped-lt</object-name>
+		<object-name>fdbars_pilot</object-name>
+		<object-name>adc_sw_pilot</object-name>
+		<object-name>adc_sw_copilot</object-name>
+		<object-name>tat_tas_pilot</object-name>
+		<object-name>sat_pilot</object-name>
+		<object-name>tat_tas_copilot</object-name>
+		<object-name>sat_copilot</object-name>
+		<object-name>center_panel_plate</object-name>
+		<object-name>dsp_sel_pilot</object-name>
+		<object-name>dsp_sel_copilot</object-name>
+		<object-name>afcs_hdg</object-name>
+		<object-name>crs1</object-name>
+		<object-name>altknob</object-name>
+		<object-name>crs2</object-name>
+		<object-name>crs1_hdg_label</object-name>
+		<object-name>alt_crs2_label</object-name>
+		<object-name>stbyai-glass</object-name>
+	</effect>
+	
+	<model>
+		<name>OHPanel</name>
+		<path>Aircraft/P-72/Models/FlightDeck/ohpanel.xml</path>
+		<offsets>
+			<x-m>-10.82</x-m>
+			<y-m>0</y-m>
+			<z-m>1.37</z-m>
+			<pitch-deg>70</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>EADI</name>
+		<path>Aircraft/P-72/Models/Instruments/EADI/eadi.xml</path>
+		<condition>
+			<equals>
+				<property>/systems/electric/outputs/avionics</property>
+				<value>1</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-11.2991</x-m>
+			<y-m>-0.5730</y-m>
+			<z-m>0.6682</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>EHSI</name>
+		<path>Aircraft/P-72/Models/Instruments/EHSI/ehsi.xml</path>
+		<condition>
+			<equals>
+				<property>/systems/electric/outputs/avionics</property>
+				<value>1</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-11.2708</x-m>
+			<y-m>-0.5738</y-m>
+			<z-m>0.5041</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>EADI (FO)</name>
+		<path>Aircraft/P-72/Models/Instruments/EADI/eadi-fo.xml</path>
+		<condition>
+			<equals>
+				<property>/systems/electric/outputs/avionics</property>
+				<value>1</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-11.2991</x-m>
+			<y-m>0.6043</y-m>
+			<z-m>0.6668</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>EHSI (FO)</name>
+		<path>Aircraft/P-72/Models/Instruments/EHSI/ehsi1.xml</path>
+		<condition>
+			<equals>
+				<property>/systems/electric/outputs/avionics</property>
+				<value>1</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-11.2708</x-m>
+			<y-m>0.6042</y-m>
+			<z-m>0.5041</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>ADU</name>
+		<path>Aircraft/P-72/Models/Instruments/ADU/adu.xml</path>
+		<condition>
+			<equals>
+				<property>/systems/electric/outputs/avionics</property>
+				<value>1</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-11.1706</x-m>
+			<y-m>0.0095</y-m>
+			<z-m>0.9188</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Brakes</name>
+		<path>Aircraft/P-72/Models/Instruments/BRK/Brakes.xml</path>
+		<offsets>
+			<x-m>-11.3044</x-m>
+			<y-m>0.0887</y-m>
+			<z-m>0.6813</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Engine Instruments</name>
+		<path>Aircraft/P-72/Models/Instruments/Engine/eng-instruments.xml</path>
+		<offsets>
+			<x-m>-11.2733</x-m>
+			<y-m>-0.0215</y-m>
+			<z-m>0.4980</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Airspeed Indicator</name>
+		<path>Aircraft/P-72/Models/Instruments/ASI/airspeed-indicator.xml</path>
+		<offsets>
+			<x-m>-11.2996</x-m>
+			<y-m>-0.7181</y-m>
+			<z-m>0.6628</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Airspeed Indicator (FO)</name>
+		<path>Aircraft/P-72/Models/Instruments/ASI/airspeed-indicator.xml</path>
+		<offsets>
+			<x-m>-11.2996</x-m>
+			<y-m>0.4594</y-m>
+			<z-m>0.6628</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Altimeter</name>
+		<path>Aircraft/P-72/Models/Instruments/ALT/altimeter.xml</path>
+		<offsets>
+			<x-m>-11.2985</x-m>
+			<y-m>-0.4273</y-m>
+			<z-m>0.6568</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Altimeter (FO)</name>
+		<path>Aircraft/P-72/Models/Instruments/ALT/altimeter.xml</path>
+		<offsets>
+			<x-m>-11.2985</x-m>
+			<y-m>0.7501</y-m>
+			<z-m>0.6566</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Vertical Speed Indicator</name>
+		<path>Aircraft/P-72/Models/Instruments/VSI/vertical-speed-indicator.xml</path>
+		<offsets>
+			<x-m>-11.2797</x-m>
+			<y-m>-0.4279</y-m>
+			<z-m>0.5500</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Vertical Speed Indicator (FO) </name>
+		<path>Aircraft/P-72/Models/Instruments/VSI/vertical-speed-indicator.xml</path>
+		<offsets>
+			<x-m>-11.2797</x-m>
+			<y-m>0.7496</y-m>
+			<z-m>0.5500</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Horizontal Situation Indicator</name>
+		<path>Aircraft/P-72/Models/Instruments/HSI/horizontal-situation-indicator.xml</path>
+		<offsets>
+			<x-m>-11.2803</x-m>
+			<y-m>-0.7192</y-m>
+			<z-m>0.5534</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Horizontal Situation Indicator (FO)</name>
+		<path>Aircraft/P-72/Models/Instruments/HSI/horizontal-situation-indicator.xml</path>
+		<offsets>
+			<x-m>-11.2803</x-m>
+			<y-m>0.4582</y-m>
+			<z-m>0.5534</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>VOR1/NAV1 Frequency (Collins CTL-96)</name>
+		<path>Aircraft/P-72/Models/Instruments/Collins/collins-nav0.xml</path>
+		<offsets>
+			<x-m>-11.1694</x-m>
+			<y-m>-0.1465</y-m>
+			<z-m>0.9065</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>VOR2/NAV2 Frequency (Collins CTL-96)</name>
+		<path>Aircraft/P-72/Models/Instruments/Collins/collins-nav1.xml</path>
+		<offsets>
+			<x-m>-11.1694</x-m>
+			<y-m>0.1636</y-m>
+			<z-m>0.9065</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Local Time Clock</name>
+		<path>Aircraft/P-72/Models/Instruments/Clock/clock.xml</path>
+		<offsets>
+			<x-m>-11.2913</x-m>
+			<y-m>-0.8096</y-m>
+			<z-m>0.6161</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Local Time Clock (FO)</name>
+		<path>Aircraft/P-72/Models/Instruments/Clock/clock.xml</path>
+		<offsets>
+			<x-m>-11.2913</x-m>
+			<y-m>0.3679</y-m>
+			<z-m>0.6161</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Standby Airspeed Indicator</name>
+		<path>Aircraft/P-72/Models/Instruments/ASI/stby-asi.xml</path>
+		<offsets>
+			<x-m>-11.3061</x-m>
+			<y-m>-0.1377</y-m>
+			<z-m>0.6839</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Standby Altimeter</name>
+		<path>Aircraft/P-72/Models/Instruments/ALT/stby-alt.xml</path>
+		<offsets>
+			<x-m>-11.2930</x-m>
+			<y-m>-0.1382</y-m>
+			<z-m>0.6099</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Flaps Indicator</name>
+		<path>Aircraft/P-72/Models/Instruments/Flaps/flaps.xml</path>
+		<offsets>
+			<x-m>-11.2787</x-m>
+			<y-m>0.1475</y-m>
+			<z-m>0.5290</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	
+	<!-- Radios left to right-->
+	<model>
+		<name>ADF1</name>
+		<path>Aircraft/Instruments-3d/ADF-462/ctl62-adf.xml</path>
+		<offsets>
+			<x-m>-10.470</x-m>
+			<y-m>-0.180</y-m>
+			<z-m>0.1375</z-m>
+			<pitch-deg>-90</pitch-deg>		
+		</offsets>
+	</model>
+	<model>
+		<name>COM1</name>
+		<path>Aircraft/P-72/Models/Instruments/VHF-22/ctl22-com1.xml</path>
+		<offsets>
+			<x-m>-10.470</x-m>
+			<y-m>-0.110</y-m>
+			<z-m>0.1375</z-m>
+			<pitch-deg>-90</pitch-deg>		
+		</offsets>
+	</model>
+	<model>
+		<name>ATC</name>
+		<path>Aircraft/Instruments-3d/TDR-94/ctl92-transponder.xml</path>
+		<offsets>
+			<x-m>-10.470</x-m>
+			<y-m>0.005</y-m>
+			<z-m>0.1375</z-m>
+			<pitch-deg>-90</pitch-deg>		
+		</offsets>
+	</model>
+	<model>
+		<name>COM2</name>
+		<path>Aircraft/P-72/Models/Instruments/VHF-22/ctl22-com2.xml</path>
+		<offsets>
+			<x-m>-10.470</x-m>
+			<y-m>0.120</y-m>
+			<z-m>0.1375</z-m>
+			<pitch-deg>-90</pitch-deg>		
+		</offsets>
+	</model>
+
+	<model>
+		<name>ADF2</name>
+		<path>Aircraft/Instruments-3d/ADF-462/ctl62-adf.xml</path>
+		<offsets>
+			<x-m>-10.470</x-m>
+			<y-m>0.190</y-m>
+			<z-m>0.1375</z-m>
+			<pitch-deg>-90</pitch-deg>		
+		</offsets>
+	</model>
+	<!-- Flight Management Computer -->
+	
+	<model>
+		<name>Flight Management Computer</name>
+		<path>Aircraft/P-72/Models/Instruments/FMC/fmc-main.xml</path>
+		<offsets>
+			<x-m>-11.0993</x-m>
+			<y-m>0.0058</y-m>
+			<z-m>0.2855</z-m>
+			<pitch-deg>-76.5</pitch-deg>
+		</offsets>
+	</model>
+
+	<!-- Trim Indicators -->
+
+	<model>
+		<name>Trim Indicators</name>
+		<path>Aircraft/P-72/Models/FlightDeck/trim-ind.xml</path>
+		<offsets>
+			<x-m>-11.2598</x-m>
+			<y-m>0.1489</y-m>
+			<z-m>0.4485</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+
+	
+</PropertyList>
