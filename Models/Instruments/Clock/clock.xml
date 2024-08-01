@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>clock.ac</path>
+	
+	<!-- UTC: /sim/time/utc/day-seconds -->
+	<!-- Local Offset: /sum/time/local-offset -->
+    
+    <animation>
+    	<type>rotate</type>
+    	<object-name>clock-sec</object-name>
+    	<expression>
+			<product>
+				<sum>
+					<property>/sim/time/utc/day-seconds</property>
+					<property>/sim/time/local-offset</property>
+				</sum>
+				<value>6</value>
+			</product>
+    	</expression>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+    
+    <animation>
+    	<type>rotate</type>
+    	<object-name>clock-min</object-name>
+    	<expression>
+			<product>
+				<sum>
+					<property>/sim/time/utc/day-seconds</property>
+					<property>/sim/time/local-offset</property>
+				</sum>
+				<value>0.1</value>
+			</product>
+    	</expression>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+    
+    <animation>
+    	<type>rotate</type>
+    	<object-name>clock-hr</object-name>
+    	<expression>
+			<product>
+				<sum>
+					<property>/sim/time/utc/day-seconds</property>
+					<property>/sim/time/local-offset</property>
+				</sum>
+				<value>0.0083333</value>
+			</product>
+    	</expression>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>clock-min</object-name>
+		<object-name>clock-hr</object-name>
+		<object-name>clock-sec</object-name>
+		<object-name>faceplate</object-name>
+		<diffuse>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</diffuse>
+		<ambient>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</ambient>
+		<specular>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</specular>
+		<emission>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</emission>
+		<condition>
+			<not>
+				<property>/systems/electric/outputs/avionics</property>
+			</not>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>clock-min</object-name>
+		<object-name>clock-hr</object-name>
+		<object-name>clock-sec</object-name>
+		<object-name>faceplate</object-name>
+		<diffuse>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</diffuse>
+		<ambient>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</ambient>
+		<specular>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</specular>
+		<emission>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.5</blue>
+		</emission>
+		<condition>
+			<property>/systems/electric/outputs/avionics</property>
+		</condition>
+	</animation>	
+</PropertyList>

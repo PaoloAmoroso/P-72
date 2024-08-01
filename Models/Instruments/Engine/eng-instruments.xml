@@ -1,0 +1,666 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>eng-instruments.ac</path>
+	
+	<animation>
+		<type>material</type>
+		<object-name>text</object-name>
+		<emission>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+			<factor>0.8</factor>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>text</object-name>
+		<condition>
+			<equals>
+				<property>/systems/electric/outputs/avionics</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>vert_instruments</object-name>
+		<object-name>horiz_instruments</object-name>
+		<object-name>ff0</object-name>
+		<object-name>ff1</object-name>
+		<object-name>oiltemp0</object-name>
+		<object-name>oiltemp1</object-name>
+		<object-name>cylinder</object-name>
+		<object-name>oilpress0</object-name>
+		<object-name>oilpress1</object-name>
+		<object-name>nh0</object-name>
+		<object-name>nh1</object-name>
+		<object-name>itt0</object-name>
+		<object-name>itt1</object-name>
+		<object-name>np0</object-name>
+		<object-name>np1</object-name>
+		<object-name>torque0</object-name>
+		<object-name>torque1</object-name>
+		<diffuse>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</diffuse>
+		<ambient>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</ambient>
+		<specular>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</specular>
+		<emission>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</emission>
+		<condition>
+			<not>
+				<property>/systems/electric/outputs/avionics</property>
+			</not>
+		</condition>
+	</animation>
+	
+	<animation>
+    	<type>rotate</type>
+    	<object-name>torque0</object-name>
+    	<property>engines/engine[0]/thruster/prop_torque</property>
+    	<factor>0.05</factor>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>-0.0389</y-m>
+    		<z-m>0.1551</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+    
+    <animation>
+    	<type>rotate</type>
+    	<object-name>torque1</object-name>
+    	<property>engines/engine[1]/thruster/prop_torque</property>
+    	<factor>0.05</factor>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>0.0372</y-m>
+    		<z-m>0.1543</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+    
+    <animation>
+    	<type>rotate</type>
+    	<object-name>np0</object-name>
+    	<property>engines/engine[0]/thruster/prop_rpm</property>
+    	<factor>0.176</factor>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>-0.0389</y-m>
+    		<z-m>0.0800</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+    
+    <animation>
+    	<type>rotate</type>
+    	<object-name>np1</object-name>
+    	<property>engines/engine[1]/thruster/prop_rpm</property>
+    	<factor>0.176</factor>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>0.0372</y-m>
+    		<z-m>0.0792</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+    
+    <animation>
+    	<type>rotate</type>
+    	<object-name>itt0</object-name>
+    	<property>engines/engine[0]/itt_degc</property>
+    	<interpolation>
+    		<entry>
+    			<ind>0</ind>
+    			<dep>0</dep>
+    		</entry>
+    		<entry>
+    			<ind>500</ind>
+    			<dep>42</dep>
+    		</entry>
+    		<entry>
+    			<ind>1000</ind>
+    			<dep>220</dep>
+    		</entry>
+    		<entry>
+    			<ind>1200</ind>
+    			<dep>235</dep>
+    		</entry>
+    	</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>-0.0392</y-m>
+    		<z-m>0.0018</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+    
+    <animation>
+    	<type>rotate</type>
+    	<object-name>itt1</object-name>
+    	<property>engines/engine[1]/itt_degc</property>
+    	<interpolation>
+    		<entry>
+    			<ind>0</ind>
+    			<dep>0</dep>
+    		</entry>
+    		<entry>
+    			<ind>500</ind>
+    			<dep>42</dep>
+    		</entry>
+    		<entry>
+    			<ind>1000</ind>
+    			<dep>220</dep>
+    		</entry>
+    		<entry>
+    			<ind>1200</ind>
+    			<dep>235</dep>
+    		</entry>
+    	</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>0.0370</y-m>
+    		<z-m>0.0013</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+    
+    <animation>
+    	<type>rotate</type>
+    	<object-name>nh0</object-name>
+    	<property>engines/engine[0]/n1</property>
+    	<factor>2.04</factor>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>-0.0392</y-m>
+    		<z-m>-0.0761</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+    
+    <animation>
+    	<type>rotate</type>
+    	<object-name>nh1</object-name>
+    	<property>engines/engine[1]/n1</property>
+    	<factor>2.04</factor>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>0.0368</y-m>
+    		<z-m>-0.0767</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+    
+    <animation>
+    	<type>rotate</type>
+    	<object-name>ff0</object-name>
+    	<property>engines/engine[0]/fuelflow-kgph</property>
+    	<interpolation>
+    		<entry>
+    			<ind>0</ind>
+    			<dep>0</dep>
+    		</entry>
+    		<entry>
+    			<ind>600</ind>
+    			<dep>75</dep>
+    		</entry>
+    		<entry>
+    			<ind>1000</ind>
+    			<dep>220</dep>
+    		</entry>
+    	</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>-0.0376</y-m>
+    		<z-m>-0.1557</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+    
+    <animation>
+    	<type>rotate</type>
+    	<object-name>ff1</object-name>
+    	<property>engines/engine[1]/fuelflow-kgph</property>
+    	<interpolation>
+    		<entry>
+    			<ind>0</ind>
+    			<dep>0</dep>
+    		</entry>
+    		<entry>
+    			<ind>600</ind>
+    			<dep>75</dep>
+    		</entry>
+    		<entry>
+    			<ind>1000</ind>
+    			<dep>220</dep>
+    		</entry>
+    	</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>0.0378</y-m>
+    		<z-m>-0.1557</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+    
+    <animation>
+    	<type>rotate</type>
+    	<object-name>oilpress0</object-name>
+    	<property>engines/engine[0]/oil-pressure-psi-adjusted</property>
+    	<interpolation>
+    		<entry>
+    			<ind>0</ind>
+    			<dep>0</dep>
+    		</entry>
+    		<entry>
+    			<ind>40</ind>
+    			<dep>15</dep>
+    		</entry>
+    		<entry>
+    			<ind>80</ind>
+    			<dep>85</dep>
+    		</entry>
+    	</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>-0.1138</y-m>
+    		<z-m>-0.1547</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+    
+    <animation>
+    	<type>rotate</type>
+    	<object-name>oiltemp0</object-name>
+    	<property>engines/engine[0]/oil-temperature-degc</property>
+    	<interpolation>
+    		<entry>
+    			<ind>0</ind>
+    			<dep>0</dep>
+    		</entry>
+    		<entry>
+    			<ind>20</ind>
+    			<dep>14</dep>
+    		</entry>
+    		<entry>
+    			<ind>100</ind>
+    			<dep>82</dep>
+    		</entry>
+    	</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>-0.1138</y-m>
+    		<z-m>-0.1547</z-m>
+    	</center>
+    	<axis>
+    		<x>1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+    
+    <animation>
+    	<type>rotate</type>
+    	<object-name>oilpress1</object-name>
+    	<property>engines/engine[1]/oil-pressure-psi-adjusted</property>
+    	<interpolation>
+    		<entry>
+    			<ind>0</ind>
+    			<dep>0</dep>
+    		</entry>
+    		<entry>
+    			<ind>40</ind>
+    			<dep>15</dep>
+    		</entry>
+    		<entry>
+    			<ind>80</ind>
+    			<dep>85</dep>
+    		</entry>
+    	</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>0.1133</y-m>
+    		<z-m>-0.1547</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+    
+    <animation>
+    	<type>rotate</type>
+    	<object-name>oiltemp1</object-name>
+    	<property>engines/engine[1]/oil-temperature-degc</property>
+    	<interpolation>
+    		<entry>
+    			<ind>0</ind>
+    			<dep>0</dep>
+    		</entry>
+    		<entry>
+    			<ind>20</ind>
+    			<dep>14</dep>
+    		</entry>
+    		<entry>
+    			<ind>100</ind>
+    			<dep>82</dep>
+    		</entry>
+    	</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>0.1133</y-m>
+    		<z-m>-0.1547</z-m>
+    	</center>
+    	<axis>
+    		<x>1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+    
+    <text>
+		<name>text</name>
+		<offsets>
+			<x-m>0.001</x-m>
+			<y-m>-0.0390</y-m>
+			<z-m>0.1404</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%3.1f</format>
+		<property>/engines/engine[0]/thruster/prop_torque-percent</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">led.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+		<name>text</name>
+		<offsets>
+			<x-m>0.001</x-m>
+			<y-m>0.0373</y-m>
+			<z-m>0.1400</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%3.1f</format>
+		<property>/engines/engine[1]/thruster/prop_torque-percent</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">led.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+		<name>text</name>
+		<offsets>
+			<x-m>0.001</x-m>
+			<y-m>-0.0390</y-m>
+			<z-m>0.0648</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%3.1f</format>
+		<property>/engines/engine[0]/thruster/prop_rpm-percent</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">led.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+		<name>text</name>
+		<offsets>
+			<x-m>0.001</x-m>
+			<y-m>0.0373</y-m>
+			<z-m>0.0641</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%3.1f</format>
+		<property>/engines/engine[1]/thruster/prop_rpm-percent</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">led.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+		<name>text</name>
+		<offsets>
+			<x-m>0.001</x-m>
+			<y-m>-0.0392</y-m>
+			<z-m>-0.0118</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%4.0f</format>
+		<property>/engines/engine[0]/itt_degc</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">led.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+		<name>text</name>
+		<offsets>
+			<x-m>0.001</x-m>
+			<y-m>0.0373</y-m>
+			<z-m>-0.0125</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%4.0f</format>
+		<property>/engines/engine[1]/itt_degc</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">led.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	
+	<text>
+		<name>text</name>
+		<offsets>
+			<x-m>0.001</x-m>
+			<y-m>-0.0392</y-m>
+			<z-m>-0.0905</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%3.1f</format>
+		<property>/engines/engine[0]/n1</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">led.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+		<name>text</name>
+		<offsets>
+			<x-m>0.001</x-m>
+			<y-m>0.0373</y-m>
+			<z-m>-0.0912</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%3.1f</format>
+		<property>/engines/engine[1]/n1</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">led.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+		<name>text</name>
+		<offsets>
+			<x-m>0.001</x-m>
+			<y-m>-0.0376</y-m>
+			<z-m>-0.1704</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%4.1f</format>
+		<property>/engines/engine[0]/fuelflow-kgph</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">led.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+		<name>text</name>
+		<offsets>
+			<x-m>0.001</x-m>
+			<y-m>0.0379</y-m>
+			<z-m>-0.1697</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%4.1f</format>
+		<property>/engines/engine[1]/fuelflow-kgph</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">led.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+</PropertyList>
