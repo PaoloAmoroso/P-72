@@ -4,7 +4,7 @@
 
   <submodel>
     <name>SAR Raft Inflated</name>
-    <model>Aircraft/Breguet-Atlantic/Models/Effects/Weapons/SAR/SAR_Raft_Inflated.xml</model>
+    <model>Aircraft/P-72/Models/Effects/Weapons/SAR/SAR_Raft_Inflated.xml</model>
     <speed>0</speed>
     <repeat>false</repeat>
     <delay>0</delay>
