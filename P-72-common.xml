@@ -406,7 +406,7 @@ The ATR 72MP features Command, Control, Communications, Computers, Intelligence,
                   <label>ATR 72ASW Operation Keys</label>
                   </text>
                   <key>
-				<name>q/Q</name>
+				<name>q</name>
 				<desc>DASS Flares Launcher</desc>
 			  </key>
                   <key>
@@ -414,26 +414,30 @@ The ATR 72MP features Command, Control, Communications, Computers, Intelligence,
 				<desc>Sonobuoy Launcher</desc>
 			  </key>
                   <key>
-				<name>H/u</name>
-				<desc>Pilon 1 Launch</desc>
+				<name>s</name>
+				<desc>SAR Life Raft Launch</desc>
 			  </key>
                   <key>
-				<name>K/i</name>
-				<desc>Pilon 2 Launch</desc>
+				<name>H/K | N/M</name>
+				<desc>MU90 Launch</desc>
 			  </key>
                   <key>
-				<name>N/n/j</name>
-				<desc>Pilon 3 Launch</desc>
+				<name>u/i | n/m</name>
+				<desc>SOM-J Launch</desc>
 			  </key>
                   <key>
-				<name>M/m/J</name>
-				<desc>Pilon 4 Launch</desc>
+				<name>j/J</name>
+				<desc>Marte-ER Launch</desc>
+			  </key>
+                  <key>
+				<name>Q</name>
+				<desc>Reset View</desc>
 			  </key>
                   <text>_____LEONARDO_____
                         _____ATR 72 MP_____
                         _____ATR 72 ASW_____
                    
-                   Select the PAYLOAD from the main menu.
+                   Select the PAYLOAD from "Aircraft Configuration" or from the main load menu.
                    Payload depends on avaiable pylons.
                    
                    Select AIRCRAFT CONFIGURATION for:
@@ -448,7 +452,7 @@ The ATR 72MP features Command, Control, Communications, Computers, Intelligence,
                              PYLONS 3/4:
                              N/M: MU90
                              n/m: SOM-J
-                             j/J: Marte-ER</text>
+                             j/J: Marte-ER </text>
 		</help>
 	</sim>
 	
