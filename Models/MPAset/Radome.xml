@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>Radome.ac</path>
+
+  <animation>
+   <type>select</type>
+   <object-name>Radome</object-name>
+   <condition>
+     <property>sim/model/atr/Radome</property>
+   </condition>
+ </animation>
+
+</PropertyList>

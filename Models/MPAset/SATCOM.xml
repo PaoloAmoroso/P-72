@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>SATCOM.ac</path>
+
+  <animation>
+   <type>select</type>
+   <object-name>SATCOM</object-name>
+   <condition>
+     <property>sim/model/atr/SATCOM</property>
+   </condition>
+ </animation>
+
+</PropertyList>

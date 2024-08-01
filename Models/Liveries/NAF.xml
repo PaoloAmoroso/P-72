@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name>ATR 72MP, NAF</name>
+				<texture>Liveries/NAF.png</texture>
+				<texture-wings>Liveries/Grey-wings.png</texture-wings>
+			</livery>
+                 <livery-pod>
+                      <texture>Liveries/NAF.png</texture>
+                </livery-pod>
+                <atr>   
+      <Radome type="bool">true</Radome>
+      <flir type="bool">true</flir>
+      <MPA type="bool">false</MPA>
+      <SATCOM type="bool">true</SATCOM>
+      <ELINT type="bool">false</ELINT>
+      <SLAR type="bool">false</SLAR>
+      <MAD type="bool">false</MAD>
+      <Pylons-A type="bool">false</Pylons-A>
+      <Pylons-B type="bool">false</Pylons-B>
+                </atr>
+		</model>
+	</sim>
+</PropertyList>

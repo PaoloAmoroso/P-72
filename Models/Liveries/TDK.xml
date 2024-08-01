@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name>ATR 72ASW, TurAF</name>
+				<texture>Liveries/TDK.png</texture>
+				<texture-wings>Liveries/Grey-wings.png</texture-wings>
+			</livery>
+                <atr>   
+      <Radome type="bool">true</Radome>
+      <flir type="bool">true</flir>
+      <MPA type="bool">true</MPA>
+      <SATCOM type="bool">false</SATCOM>
+      <ELINT type="bool">false</ELINT>
+      <SLAR type="bool">false</SLAR>
+      <MAD type="bool">true</MAD>
+      <Pylons-A type="bool">true</Pylons-A>
+      <Pylons-B type="bool">false</Pylons-B>
+                </atr>
+		</model>
+	</sim>
+</PropertyList>

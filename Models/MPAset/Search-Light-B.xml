@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>Search-Light-B.ac</path>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>Search-Light-Glass-B</object-name>
+  </effect>
+
+  <animation>
+   <type>select</type>
+   <object-name>Search-Light-B</object-name>
+   <object-name>Search-Light-Glass-B</object-name>
+   <object-name>Search-Light-R-B</object-name>
+   <object-name>Lamp-B</object-name>
+   <object-name>Support-B</object-name>
+   <condition>
+     <property>sim/model/show-Search-Light-B</property>
+   </condition>
+ </animation>
+
+</PropertyList>
