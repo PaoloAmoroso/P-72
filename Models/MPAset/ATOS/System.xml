@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>Interiors/cabin.ac</path>
+
+  <animation>
+    <object-name>Cabin</object-name>
+  </animation>
+
+  <!-- ATOS -->
+  <model>
+    <name>ATOS-1</name>
+    <path>Aircraft/P-72/Models/MPAset/ATOS/ATOS.xml</path>
+    <offsets>
+      <x-m> -1.16950 </x-m>
+      <y-m>  0.94520 </y-m>
+      <z-m>  0.46958 </z-m>
+      <heading-deg>270</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>ATOS-2</name>
+    <path>Aircraft/P-72/Models/MPAset/ATOS/ATOS.xml</path>
+    <offsets>
+      <x-m> -0.42718 </x-m>
+      <y-m>  0.94520 </y-m>
+      <z-m>  0.46958 </z-m>
+      <heading-deg>270</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>ATOS-3</name>
+    <path>Aircraft/P-72/Models/MPAset/ATOS/ATOS.xml</path>
+    <offsets>
+      <x-m> 0.31494 </x-m>
+      <y-m>  0.94520 </y-m>
+      <z-m>  0.46958 </z-m>
+      <heading-deg>270</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>ATOS-4</name>
+    <path>Aircraft/P-72/Models/MPAset/ATOS/ATOS.xml</path>
+    <offsets>
+      <x-m> 1.05710 </x-m>
+      <y-m>  0.94520 </y-m>
+      <z-m>  0.46958 </z-m>
+      <heading-deg>270</heading-deg>
+    </offsets>
+  </model>
+
+  <!-- SEAT -->
+  <model>
+    <name>Seat-1</name>
+    <path>Interiors/seat.ac</path>
+    <offsets>
+      <x-m> -1.16950 </x-m>
+      <y-m>  0.17800 </y-m>
+      <z-m>  0.11570 </z-m>
+      <heading-deg>270</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Seat-2</name>
+    <path>Interiors/seat.ac</path>
+    <offsets>
+      <x-m> -0.42718 </x-m>
+      <y-m>  0.17800 </y-m>
+      <z-m>  0.11570 </z-m>
+      <heading-deg>270</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Seat-3</name>
+    <path>Interiors/seat.ac</path>
+    <offsets>
+      <x-m>  0.31494 </x-m>
+      <y-m>  0.17800 </y-m>
+      <z-m>  0.11570 </z-m>
+      <heading-deg>270</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Seat-4</name>
+    <path>Interiors/seat.ac</path>
+    <offsets>
+      <x-m>  1.05710 </x-m>
+      <y-m>  0.17800 </y-m>
+      <z-m>  0.11570 </z-m>
+      <heading-deg>270</heading-deg>
+    </offsets>
+  </model>
+
+</PropertyList>
