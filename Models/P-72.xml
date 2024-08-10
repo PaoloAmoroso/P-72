@@ -116,6 +116,14 @@
 	       </not>
 	     </condition>
       </animation>
+
+      <animation>
+     <type>select</type>
+           <object-name>ATOS</object-name>
+	     <condition>
+	         <property>sim/current-view/internal</property>
+	     </condition>
+      </animation>
 	
 	<!-- Animations -->
 	
@@ -1724,6 +1732,17 @@
 		</condition>
 	</animation>
 
+  <!-- A.T.O.S. -->
+  <model>
+    <name>ATOS</name>
+    <path>MPAset/ATOS/System.xml</path>
+    <offsets>
+      <x-m> 0.0 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0 </z-m>
+    </offsets>
+  </model>
+
   <!-- MPA set -->
 <model>
   <name>Radome</name>
@@ -1861,7 +1880,6 @@
  </animation>
 
   <!-- Search Light -->
-
   <model>
   <name>Search-Light-A</name>
    <object-name>Search-Light-A</object-name>
