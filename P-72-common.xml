@@ -111,6 +111,23 @@ The ATR 72MP features Command, Control, Communications, Computers, Intelligence,
 		</config>
 	</view>
      <view n="105">
+		<name>Operators View</name>
+		<type>lookfrom</type>
+		<internal archive="y">true</internal>
+		<cockpit type="bool">true</cockpit>
+		<config>
+			<from-model type="bool">true</from-model>
+			<from-model-idx type="int">0</from-model-idx>
+			<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+			<x-offset-m type="double">0.0</x-offset-m>
+			<y-offset-m type="double">0.57673</y-offset-m>
+			<z-offset-m type="double">-1.1695</z-offset-m>
+			<pitch-offset-deg>-5</pitch-offset-deg>
+                <heading-offset-deg>250</heading-offset-deg>
+			<default-field-of-view-deg type="double">100</default-field-of-view-deg>
+		</config>
+	</view>
+     <view n="106">
 		<name>Star Safire View</name>
 		<type>lookfrom</type>
 		<internal archive="y">false</internal>
@@ -126,7 +143,7 @@ The ATR 72MP features Command, Control, Communications, Computers, Intelligence,
 			<default-field-of-view-deg type="double">120</default-field-of-view-deg>
 		</config>
 	</view>
-     <view n="106">
+     <view n="107">
 		<name>Left Observer View</name>
 		<type>lookfrom</type>
 		<internal archive="y">false</internal>
@@ -142,7 +159,7 @@ The ATR 72MP features Command, Control, Communications, Computers, Intelligence,
 			<default-field-of-view-deg type="double">80</default-field-of-view-deg>
 		</config>
 	</view>
-     <view n="107">
+     <view n="108">
 		<name>Right Observer View</name>
 		<type>lookfrom</type>
 		<internal archive="y">false</internal>
@@ -437,8 +454,8 @@ The ATR 72MP features Command, Control, Communications, Computers, Intelligence,
                         _____ATR 72 MP_____
                         _____ATR 72 ASW_____
                    
-                   Select the PAYLOAD from "Aircraft Configuration" or from the main load menu.
-                   Payload depends on avaiable pylons.
+                   <line>Select the PAYLOAD from "Aircraft Configuration" or from the main load menu.
+                   Payload depends on avaiable pylons.</line>
                    
                    Select AIRCRAFT CONFIGURATION for:
                    - Search Light: SAR and C/SAR Missions
@@ -780,6 +797,22 @@ The ATR 72MP features Command, Control, Communications, Computers, Intelligence,
 		<pressurization>
 			<cabin-altitude-ft>0</cabin-altitude-ft>
 		</pressurization>
+
+        <radar>
+           <serviceable type="bool" archive="y">true</serviceable>
+           <switch type="string" archive="y">off</switch>
+           <mode-control type="int" archive="y">3</mode-control>
+           <range type="int" archive="y">20</range>
+           <mode type="string" archive="y">WX</mode>
+           <heading-marker type="bool" archive="y">false</heading-marker>
+           <lightning type="bool" archive="y">false</lightning>
+           <display-mode type="string">ARC</display-mode>
+             <display-controls>
+                <WX type="bool" archive="y">false</WX>
+                <data type="bool" archive="y">false</data>
+                <pos type="bool" archive="y">true</pos>
+             </display-controls>
+        </radar>
 	</instrumentation>
 
 	<consumables>
@@ -1142,7 +1175,14 @@ The ATR 72MP features Command, Control, Communications, Computers, Intelligence,
 			<file>Aircraft/P-72/Nasal/brakesystem.nas</file>
 			<file>Aircraft/P-72/Nasal/ohpanel.nas</file>
                 <file>Aircraft/P-72/Nasal/weapons.nas</file>
+                <file>Aircraft/P-72/Nasal/map.nas</file>
 		</atr>
+           <radar>
+                <file>Aircraft/P-72/Nasal/radar.nas</file>
+           </radar>
+           <terrain-map>
+                <file>Aircraft/P-72/Nasal/terrain-map.nas</file>
+           </terrain-map>
 		<hydraulics>
 			<file>Aircraft/P-72/Nasal/hydraulics/common.nas</file>
 			<file>Aircraft/P-72/Nasal/hydraulics/green.nas</file>
