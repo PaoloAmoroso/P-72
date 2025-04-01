@@ -1,8 +1,20 @@
 # var fmc_gui = gui.Dialog.new("sim/gui/dialogs/fmc/dialog", "Aircraft/P-72/Systems/fmc-canvas-dlg.xml");
 
-aircraft.livery.init("Aircraft/P-72/Models/Liveries");
+#aircraft.livery.init("Aircraft/P-72/Models/Liveries");
 # ~ getprop("sim/aero"));
 
+var aircraft_type = getprop("/sim/aircraft"); # Legge il modello 
+
+var livery_path = "Aircraft/P-72/Models/Liveries"; # P-72
+
+if (aircraft_type == "ATR42MP") {
+    livery_path = "Aircraft/P-72/Models/Liveries-42"; # ATR42MP
+}
+
+print("DEBUG: Aereo selezionato: " ~ aircraft_type);
+print("DEBUG: Livery path impostato su: " ~ livery_path);
+
+aircraft.livery.init(livery_path);
 # Start at FMC Page IDENT
 fmc.GoToPage("ident");
 
