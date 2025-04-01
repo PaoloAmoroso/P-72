@@ -228,8 +228,8 @@
        <y>-227.732 </y>
        <z>   75.25 </z>
      </location>
-     <capacity unit="LBS"> 5511 </capacity>
-     <contents unit="LBS"> 3000 </contents>
+     <capacity unit="LBS"> 7597 </capacity>
+     <contents unit="LBS"> 6000 </contents>
 	 <temperature>59</temperature>
   </tank>
 
@@ -239,8 +239,8 @@
        <y> 227.732 </y>
        <z>   75.25 </z>
      </location>
-     <capacity unit="LBS"> 5511 </capacity>
-     <contents unit="LBS"> 3000 </contents>
+     <capacity unit="LBS"> 7597 </capacity>
+     <contents unit="LBS"> 6000 </contents>
 	 <temperature>59</temperature>
   </tank>
   
@@ -251,7 +251,7 @@
        <z>   75.25 </z>
      </location>
      <capacity unit="LBS"> 355 </capacity>
-     <contents unit="LBS"> 0 </contents>
+     <contents unit="LBS"> 355 </contents>
 	 <temperature>65</temperature>
   </tank>
   
@@ -262,7 +262,7 @@
        <z>   75.25 </z>
      </location>
      <capacity unit="LBS"> 355 </capacity>
-     <contents unit="LBS"> 0 </contents>
+     <contents unit="LBS"> 355 </contents>
 	 <temperature>65</temperature>
   </tank>
 
