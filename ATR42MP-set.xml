@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList include="ATR-42MP-common.xml">
+
+	<sim>
+		<description>Leonardo ATR 42MP</description>
+		<flight-model>jsb</flight-model>
+		<aero>P-72</aero>
+           <variant-of>P-72</variant-of>
+		<author>Paolo Amoroso, Narendran Muraleedharan, Donald Belcham, camelon, ot-666</author>
+		<engine>pw127f</engine>
+
+		<model>
+			<path>Aircraft/P-72/Models/ATR42MP.xml</path>
+		</model>
+           <status>Production</status>
+           <rating>
+               <FDM type="int">     5 </FDM>
+               <systems type="int"> 4 </systems>
+               <cockpit type="int"> 4 </cockpit>
+               <model type="int">   5 </model>
+           </rating>
+           <previews>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-31.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-32.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-33.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash-34.png</path>
+			</preview>
+		</previews>
+           	
+</sim>
+
+<payload>
+		<weight n="0">
+			<name>Crew</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]">380</weight-lb>
+			<max-lb>480</max-lb>
+			<min-lb>100</min-lb>
+		</weight>
+
+		<weight n="1">
+			<name>Cargo</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]">750</weight-lb>
+			<max-lb>960</max-lb>
+			<min-lb>0</min-lb>
+		</weight>
+
+		<weight n="2">
+			<name>Mission Payload</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]">12000</weight-lb>
+			<max-lb>13320</max-lb>
+			<min-lb>0</min-lb>
+		</weight>
+	</payload>
+
+     <limits>
+		   <mass-and-balance>
+			<maximum-takeoff-mass-lbs>50706</maximum-takeoff-mass-lbs>
+		   </mass-and-balance>
+     </limits>
+
+     <help>
+       <text>_____LEONARDO_____
+             _____ATR 42 MP_____
+             _____Surveyor_____
+                                      
+             Select AIRCRAFT CONFIGURATION for:
+             - Search Light: SAR and C/SAR Missions</text>
+	</help>
+
+</PropertyList>
