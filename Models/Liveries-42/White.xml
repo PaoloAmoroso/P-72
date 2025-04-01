@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name>ATR 42MP, White</name>
+				<texture>Aircraft/P-72/Models/ATR42-pax.png</texture>
+				<texture-wings>Models/ATR-wings.png</texture-wings>
+			</livery>
+                <livery-pod>
+                      <texture>Liveries/White.png</texture>
+                </livery-pod>
+                <atr>   
+      <Radome type="bool">true</Radome>
+      <flir type="bool">true</flir>
+      <SLAR type="bool">true</SLAR>
+      <MP type="bool">true</MP>
+      <ESM type="bool">true</ESM>
+                </atr>
+		</model>
+	</sim>
+</PropertyList>

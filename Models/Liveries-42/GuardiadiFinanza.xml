@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name>ATR 42MP, Guardia di Finanza</name>
+				<texture>Liveries-42/GuardiadiFinanza.png</texture>
+				<texture-wings>Liveries-42/LightGrey-wings.png</texture-wings>
+			</livery>
+                <livery-pod>
+                      <texture>Liveries-42/GuardiadiFinanza.png</texture>
+                </livery-pod>
+                <atr>   
+      <Radome type="bool">true</Radome>
+      <flir type="bool">true</flir>
+      <SLAR type="bool">false</SLAR>
+      <MP type="bool">true</MP>
+      <ESM type="bool">true</ESM>
+                </atr>
+		</model>
+	</sim>
+</PropertyList>
