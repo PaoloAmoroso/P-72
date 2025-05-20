@@ -431,6 +431,10 @@ The ATR 72MP features Command, Control, Communications, Computers, Intelligence,
 				<desc>Sonobuoy Launcher</desc>
 			  </key>
                   <key>
+				<name>Ctrl+s</name>
+				<desc>Smokebuoy Launcher</desc>
+			  </key>
+                  <key>
 				<name>s</name>
 				<desc>SAR Life Raft Launch</desc>
 			  </key>
@@ -967,6 +971,23 @@ The ATR 72MP features Command, Control, Communications, Computers, Intelligence,
 		          </mod-up>
 	          </key>
 
+                <key n="19">
+		          <name>Ctrl+s</name>
+		          <desc>Smokebuoy release</desc>
+		          <binding>
+			          <command>property-assign</command>
+			          <property>/controls/armament/smokebuoy-release</property>
+			          <value>1</value>
+		          </binding>
+		          <mod-up>
+			     <binding>
+				     <command>property-assign</command>
+				     <property>/controls/armament/smokebuoy-release</property>
+				<value>0</value>
+			     </binding>
+		          </mod-up>
+	          </key>
+
                <key n="115">
 		          <name>s</name>
 		          <desc>SAR Raft release</desc>
@@ -1006,7 +1027,7 @@ The ATR 72MP features Command, Control, Communications, Computers, Intelligence,
      <name>u</name>
       <binding>
         <command>property-assign</command>
-        <property>controls/signal3</property>
+        <property>controls/signal5</property>
         <value>true</value>
       </binding>
     </key>
@@ -1015,7 +1036,7 @@ The ATR 72MP features Command, Control, Communications, Computers, Intelligence,
       <name>i</name>
       <binding>
         <command>property-assign</command>
-        <property>controls/signal4</property>
+        <property>controls/signal6</property>
         <value>true</value>
       </binding>
     </key>
@@ -1024,7 +1045,7 @@ The ATR 72MP features Command, Control, Communications, Computers, Intelligence,
       <name>N</name>
       <binding>
         <command>property-assign</command>
-        <property>controls/signal5</property>
+        <property>controls/signal3</property>
         <value>true</value>
       </binding>
     </key>
@@ -1033,7 +1054,7 @@ The ATR 72MP features Command, Control, Communications, Computers, Intelligence,
       <name>M</name>
       <binding>
         <command>property-assign</command>
-        <property>controls/signal6</property>
+        <property>controls/signal4</property>
         <value>true</value>
       </binding>
     </key>
