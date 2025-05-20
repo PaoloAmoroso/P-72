@@ -4,7 +4,7 @@
 
   <submodel>
     <name>Bomb impact fire</name>
-    <model>Aircraft/Falcon-50/Models/Effects/Droppable/Smokebuoy/SignalSmoke.xml</model>
+    <model>Aircraft/P-72/Models/Effects/Weapons/SAR/Smokebuoy/SignalSmoke.xml</model>
     <speed>0</speed>
     <repeat>false</repeat>
     <delay>0</delay>
