@@ -2098,7 +2098,7 @@
     <type>select</type>
     <object-name>MU90-BL</object-name>
     <condition>
-      <not><property>controls/signal5</property></not>
+      <not><property>controls/signal3</property></not>
     </condition>
   </animation>
 
@@ -2106,7 +2106,7 @@
     <type>select</type>
     <object-name>MU90-BR</object-name>
     <condition>
-      <not><property>controls/signal6</property></not>
+      <not><property>controls/signal4</property></not>
     </condition>
   </animation>
 
@@ -2226,7 +2226,7 @@
     <type>select</type>
     <object-name>SOM-1L</object-name>
     <condition>
-      <not><property>controls/signal3</property></not>
+      <not><property>controls/signal5</property></not>
     </condition>
   </animation>
 
@@ -2234,7 +2234,7 @@
     <type>select</type>
     <object-name>SOM-1R</object-name>
     <condition>
-      <not><property>controls/signal4</property></not>
+      <not><property>controls/signal6</property></not>
     </condition>
   </animation>
 

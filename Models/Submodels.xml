@@ -211,7 +211,7 @@
   <submodel>
     <name>MU90 release BL</name>
     <model>Aircraft/P-72/Models/Effects/Weapons/MU90.xml</model>
-    <trigger>controls/signal5</trigger>
+    <trigger>controls/signal3</trigger>
     <speed-prop>
       <property>/velocities/airspeed-kt</property>
     </speed-prop>
@@ -239,7 +239,7 @@
   <submodel>
     <name>MU90 release BR</name>
     <model>Aircraft/P-72/Models/Effects/Weapons/MU90.xml</model>
-    <trigger>controls/signal6</trigger>
+    <trigger>controls/signal4</trigger>
     <speed-prop>
       <property>/velocities/airspeed-kt</property>
     </speed-prop>
@@ -269,7 +269,7 @@
   <submodel>
     <name>SOM-J Release AL</name>
     <model>Aircraft/P-72/Models/Effects/Weapons/SOM-J.xml</model>
-    <trigger>controls/signal3</trigger>
+    <trigger>controls/signal5</trigger>
     <speed>1051</speed>
     <repeat>false</repeat>
     <delay>0.2</delay>
@@ -295,7 +295,7 @@
   <submodel>
     <name>SOM-J release AR</name>
     <model>Aircraft/P-72/Models/Effects/Weapons/SOM-J.xml</model>
-    <trigger>controls/signal4</trigger>
+    <trigger>controls/signal6</trigger>
     <speed>1051</speed>
     <repeat>false</repeat>
     <delay>0.2</delay>
