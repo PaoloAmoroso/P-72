@@ -153,7 +153,7 @@
   <!-- MU90 Torpedo Launch -->
 
   <submodel>
-    <name>MU90 release AL</name>
+    <name>MU90 release AL bomb</name>
     <model>Aircraft/P-72/Models/Effects/Weapons/MU90.xml</model>
     <trigger>controls/signal1</trigger>
     <speed-prop>
@@ -181,7 +181,7 @@
   </submodel>
 
   <submodel>
-    <name>MU90 release AR</name>
+    <name>MU90 release AR bomb</name>
     <model>Aircraft/P-72/Models/Effects/Weapons/MU90.xml</model>
     <trigger>controls/signal2</trigger>
     <speed-prop>
@@ -209,7 +209,7 @@
   </submodel>
 
   <submodel>
-    <name>MU90 release BL</name>
+    <name>MU90 release BL bomb</name>
     <model>Aircraft/P-72/Models/Effects/Weapons/MU90.xml</model>
     <trigger>controls/signal3</trigger>
     <speed-prop>
@@ -237,7 +237,7 @@
   </submodel>
 
   <submodel>
-    <name>MU90 release BR</name>
+    <name>MU90 release BR bomb</name>
     <model>Aircraft/P-72/Models/Effects/Weapons/MU90.xml</model>
     <trigger>controls/signal4</trigger>
     <speed-prop>
@@ -267,7 +267,7 @@
   <!-- SOM-J Cruise Missile Launch -->
 
   <submodel>
-    <name>SOM-J Release AL</name>
+    <name>SOM-J Release AL missile</name>
     <model>Aircraft/P-72/Models/Effects/Weapons/SOM-J.xml</model>
     <trigger>controls/signal5</trigger>
     <speed>1051</speed>
@@ -293,7 +293,7 @@
   </submodel>
 
   <submodel>
-    <name>SOM-J release AR</name>
+    <name>SOM-J release AR missile</name>
     <model>Aircraft/P-72/Models/Effects/Weapons/SOM-J.xml</model>
     <trigger>controls/signal6</trigger>
     <speed>1051</speed>
@@ -319,7 +319,7 @@
   </submodel>
 
   <submodel>
-    <name>SOM-J Release 2L</name>
+    <name>SOM-J Release 2L missile</name>
     <model>Aircraft/P-72/Models/Effects/Weapons/SOM-J.xml</model>
     <trigger>controls/signal7</trigger>
     <speed>1051</speed>
@@ -345,7 +345,7 @@
   </submodel>
 
   <submodel>
-    <name>SOM-J release 2R</name>
+    <name>SOM-J release 2R missile</name>
     <model>Aircraft/P-72/Models/Effects/Weapons/SOM-J.xml</model>
     <trigger>controls/signal8</trigger>
     <speed>1051</speed>
@@ -373,7 +373,7 @@
   <!-- Marte-ER Missile Launch -->
 
   <submodel>
-    <name>Marte-ER Release 2L</name>
+    <name>Marte-ER Release 2L missile</name>
     <model>Aircraft/P-72/Models/Effects/Weapons/Marte-ER.xml</model>
     <trigger>controls/signal9</trigger>
     <speed>980</speed>
@@ -399,7 +399,7 @@
   </submodel>
 
   <submodel>
-    <name>Marte-ER Release 2R</name>
+    <name>Marte-ER Release 2R missile</name>
     <model>Aircraft/P-72/Models/Effects/Weapons/Marte-ER.xml</model>
     <trigger>controls/signal10</trigger>
     <speed>980</speed>
@@ -424,7 +424,7 @@
     <submodel-path>Aircraft/P-72/Models/Effects/Weapons/Impact/bomb-impact.xml</submodel-path>
   </submodel>
 
-  <!-- SAR Life Raft Torpedo Launch -->
+  <!-- SAR Life Raft Launch -->
 
   <submodel>
     <name>SAR Raft release</name>
@@ -454,7 +454,7 @@
     <submodel-path>Aircraft/P-72/Models/Effects/Weapons/SAR/SAR_Operation.xml</submodel-path>
   </submodel>
 
-  <!-- Smoke marker buoy Release -->
+  <!-- Smoke Marker Buoy Release -->
 
   <submodel>
     <name>Sonobuoy</name>
