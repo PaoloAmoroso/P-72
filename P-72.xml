@@ -57,15 +57,15 @@
 		</location>
    </pointmass>
    <pointmass name="Cargo">
-    <weight unit="LBS"> 750 </weight>
+    <weight unit="LBS"> 50 </weight>
 		<location name="POINTMASS" unit="IN">
 		    <x> -240.12 </x>
 		    <y> 0 </y>
 		    <z> 11.82 </z>
 		</location>
    </pointmass>
-   <pointmass name="Passengers">
-    <weight unit="LBS"> 13320 </weight>
+   <pointmass name="Mission Payload">
+    <weight unit="LBS"> 5000 </weight>
 		<location name="POINTMASS" unit="IN">
 		    <x> 20.15 </x>
 		    <y> 0 </y>
@@ -83,9 +83,9 @@
      <z> -61.464 </z>
    </location>
    <static_friction>  0.80 </static_friction>
-   <dynamic_friction> 0.50 </dynamic_friction>
+   <dynamic_friction> 0.30 </dynamic_friction>
    <rolling_friction> 0.02 </rolling_friction>
-   <spring_coeff unit="LBS/FT">      15000 </spring_coeff>
+   <spring_coeff unit="LBS/FT">      10000 </spring_coeff>
    <damping_coeff unit="LBS/FT/SEC"> 2000 </damping_coeff>
    <max_steer unit="DEG"> 70 </max_steer>
    <brake_group>NONE</brake_group>
@@ -99,9 +99,9 @@
      <z> -69.59 </z>
    </location>
    <static_friction>  0.80 </static_friction>
-   <dynamic_friction> 0.50 </dynamic_friction>
+   <dynamic_friction> 0.30 </dynamic_friction>
    <rolling_friction> 0.02 </rolling_friction>
-   <spring_coeff unit="LBS/FT">      70000 </spring_coeff>
+   <spring_coeff unit="LBS/FT">      50000 </spring_coeff>
    <damping_coeff unit="LBS/FT/SEC"> 3500 </damping_coeff>
    <max_steer unit="DEG">0</max_steer>
    <brake_group>LEFT</brake_group>
@@ -115,9 +115,9 @@
      <z> -69.59 </z>
    </location>
    <static_friction>  0.80 </static_friction>
-   <dynamic_friction> 0.50 </dynamic_friction>
+   <dynamic_friction> 0.30 </dynamic_friction>
    <rolling_friction> 0.02 </rolling_friction>
-   <spring_coeff unit="LBS/FT">      70000 </spring_coeff>
+   <spring_coeff unit="LBS/FT">      50000 </spring_coeff>
    <damping_coeff unit="LBS/FT/SEC"> 3500 </damping_coeff>
    <max_steer unit="DEG">0</max_steer>
    <brake_group>RIGHT</brake_group>
@@ -601,7 +601,7 @@
            <property>aero/qbar-psf</property>
            <property>metrics/Sw-sqft</property>
            <property>fcs/flap-pos-deg</property>
-           <value> 0.045 </value>
+           <value> 0.065 </value>
        </product>
     </function>
 
@@ -653,7 +653,7 @@
            <property>aero/qbar-psf</property>
            <property>metrics/Sw-sqft</property>
            <property>aero/cl-squared</property>
-           <value>0.041</value>
+           <value>0.035</value>
          </product>
     </function>
 
