@@ -294,6 +294,9 @@ var FL_update = func {
     var range_nm = getprop("/instrumentation/terrain-map/range");
     if (range_nm == nil) range_nm = FL_MAX_RANGE_NM;
 
+    var antenna_tilt = getprop("/instrumentation/terrain-map/tilt-deg");
+    if (antenna_tilt == nil) antenna_tilt = 0;
+
     var row = FL_row;
     var dist_nm_row = (row + 1) * (range_nm / (FL_MAX_ROW + 1));
 
@@ -311,9 +314,9 @@ var FL_update = func {
             var frac    = s / FL_RAY_STEPS;
             var dist_nm = dist_nm_row * frac;
             var dist_ft = dist_nm * FL_FT_PER_NM;
-
-            var ray_alt = alt_ft + math.tan(FL_DEG2RAD * pitch) * dist_ft;
-
+            var total_tilt = pitch + antenna_tilt;
+            var ray_alt = alt_ft + math.tan(FL_DEG2RAD * total_tilt) * dist_ft;
+            
             var testlat = base_lat + (dist_nm * math.cos(FL_DEG2RAD * heading) / 60);
             var testlon = base_lon + (dist_nm * math.sin(FL_DEG2RAD * heading) / 60);
 
@@ -353,4 +356,3 @@ setlistener("sim/signals/fdm-initialized", func {
     FL_loop();
     FL_syncLoop();
 });
-
