@@ -1077,11 +1077,8 @@ The ATR 42MP features Command, Control, Communications, Computers, Intelligence,
                 <file>Aircraft/P-72/Nasal/map.nas</file>
 		</atr>
            <radar>
-                <file>Aircraft/P-72/Nasal/radar.nas</file>
+                <file>Aircraft/P-72/Nasal/Radar.nas</file>
            </radar>
-           <terrain-map>
-                <file>Aircraft/P-72/Nasal/terrain-map.nas</file>
-           </terrain-map>
 		<hydraulics>
 			<file>Aircraft/P-72/Nasal/hydraulics/common.nas</file>
 			<file>Aircraft/P-72/Nasal/hydraulics/green.nas</file>
