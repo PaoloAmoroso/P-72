@@ -818,6 +818,10 @@ The ATR 72MP features Command, Control, Communications, Computers, Intelligence,
              </mode>
            </radar>
 
+           <terrain-map>
+             <forward-looking type="int">0</forward-looking>
+           </terrain-map>
+
 	</instrumentation>
 
 	<consumables>
